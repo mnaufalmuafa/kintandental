@@ -8,7 +8,7 @@ Kintan Dental adalah sebuah Dental Clinic. Website Kintan Dental digunakan untuk
 Pembuat Website
 ***************
 
--  M. Naufal Mu'afa (1301180091)
+-  M Naufal Mu'afa (1301180091)
 -  Dhimas Hafid Kurniawan (1301184054)
 -  Inggrid Resmi Benita (1301184107)
 -  Saskia Putri Ananda (1301184157)
