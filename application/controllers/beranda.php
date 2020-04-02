@@ -7,5 +7,4 @@ class beranda extends CI_Controller {
     }
 }
 
-
 ?>
