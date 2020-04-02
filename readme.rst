@@ -2,7 +2,13 @@
 Tentang Website Kintan Dental
 #############################
 
-Kintan Dental adalah sebuah Dental Clinic. Website Kintan Dental digunakan untuk mengatur sistem informasi yang ada di klinik. Dalam website ini, terdapat fitur untuk CRUD Dokter, obat dan pasien
+Kintan Dental adalah sebuah Dental Clinic. Website Kintan Dental digunakan untuk mengatur sistem informasi yang ada di klinik. Dalam website ini, terdapat fitur untuk CRUD dokter, pasien, dan layanan. Admin juga dapat menginput pemeriksaan yang baru selesai dilakukan.
+
+***
+ERD
+***
+
+![ERD](https://firebasestorage.googleapis.com/v0/b/medgency.appspot.com/o/TubesWebpro%2FERD.jpg?alt=media&token=e8f7565f-b1b2-4e24-a8f8-66f8252983c9)
 
 ***************
 Pembuat Website
