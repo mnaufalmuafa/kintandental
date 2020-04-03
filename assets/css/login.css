@@ -1,6 +1,5 @@
 body {
     height: 100vh;
-    background: rgba(255,228,196,0.35) !important;
 }
 
 .container-custom {
@@ -24,6 +23,10 @@ body {
 
 .btn-login {
     background-color: #CB9C5F;
+}
+
+.btn-login:hover {
+    background-color: #DBAA69;
 }
 
 .left-side-content {
@@ -64,10 +67,6 @@ input {
     background-color: rgba(0,0,0,0) !important;
     border: 1px solid rgb(200,200,200) !important;
     height: 44px !important;
-}
-
-h4 {
-    font-family: 'Roboto', sans-serif !important;
 }
 
 button {
