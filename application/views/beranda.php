@@ -8,6 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap/css/bootstrap.css') ?>">
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/beranda.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/carousel.css') ?>">
     </head>
@@ -87,6 +88,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
         </div>
         
+        <div class="container_satu w-100 d-flex" >
+            <h4>Daftar Pemeriksaan</h4>
+            <button class="btn btn-primer ml-auto" id="btnInputPemeriksaan"> Input Pemeriksaan </button>
+        </div>
+        
+        <a href="#" class="FAB" id="FAB">
+            +
+        </a>
+        
         <script src="<?= base_url('assets/js/jquery-3.4.1.min.js') ?>"></script>
         <script src="<?= base_url('assets/css/bootstrap/js/bootstrap.js') ?>"></script>
         <script>
@@ -105,6 +115,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $("#link-4").html(valLink2);
                     $("#link-2").html(valLink4);
                     $("#link-1").html(valLink5);
+                    $("#btnInputPemeriksaan").hide();
+                }
+                else {
+                    $('#FAB').hide();
                 }
                 
                 $('#intentDropDown').click(function(){
@@ -125,12 +139,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $("#link-4").html(valLink2);
                     $("#link-2").html(valLink4);
                     $("#link-1").html(valLink5);
+                    $('#FAB').show();
+                    $('#btnInputPemeriksaan').hide();
                 }
                 else {
                     $("#link-5").html(valLink5);
                     $("#link-4").html(valLink4);
                     $("#link-2").html(valLink2);
                     $("#link-1").html(valLink1);
+                    $('#FAB').hide();
+                    $('#btnInputPemeriksaan').show();
                 }
             }
 

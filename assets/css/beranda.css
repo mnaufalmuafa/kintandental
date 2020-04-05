@@ -1,0 +1,47 @@
+.container_satu {
+    margin: 40px 0px 0px 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100% !important;
+}
+
+.container_satu button{
+    float: right;
+}
+
+.btn-primer {
+	background-color: #A66C20;
+	color: white;
+}
+
+.btn-primer {
+    color: white !important;
+}
+
+.FAB {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    text-decoration: none;
+    background-color: #A66C20;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50%;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+}
+
+.FAB:hover {
+    background-color: #c78834;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 680px) {
+    .container_satu {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 20px;
+    }
+}
