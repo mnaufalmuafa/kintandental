@@ -13,13 +13,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body>
         <div class="container-custom w-100">
             <div class="row">
-                <div class="col-6 left-side">
+                <div class="col-6 left-side" id="left-side">
                     <div class="left-side-content w-100">
                         <h1>Kintan Dental</h1>
                         <h4 class="font-weight-light"> Sistem Informasi Kintan Dental</h4>
                     </div>
                 </div>
-                <div class="col-6 right-side">
+                <div class="col-6 right-side" id="right-side">
                     <form class="form" method="post">
                         <h3 class="text-center">Login</h3>
                         <div class="form-group">
@@ -33,5 +33,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </div>
+        <script src="<?= base_url('assets/js/jquery-3.4.1.min.js') ?>"></script>
+        <script>
+            var leftSideVal;
+            var leftSideClass;
+            var rightSideClass;
+            $(document).ready(function(){
+                leftSideVal = $('.left-side').html();
+                leftSideClass = $('.left-side').attr('class');
+                rightSideClass = $('.right-side').attr('class');
+                
+                if ($(window).width() < 681) {
+                    $('.left-side').html('');
+                    $('.left-side').attr('class','d-none');
+                    $('#right-side').attr('class','col-12');
+                }
+            });
+            function jqueryResize() {
+                var width = $(window).width();
+                if (width < 681) {
+                    $('.left-side').html('');
+                    $('.left-side').attr('class','d-none');
+                    $('#right-side').attr('class','col-12');
+                }
+                else {
+                    console.log(leftSideClass);
+                    $('#left-side').attr('class',leftSideClass+' d-inline');
+                    $('.left-side').html(leftSideVal);
+                    $('#right-side').attr('class',rightSideClass);
+                }
+            }
+
+            $(window).on('resize', jqueryResize);
+        </script>
     </body>
 </html>
