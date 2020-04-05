@@ -1,7 +1,5 @@
 /*#################### Defaults ########################*/
-nav,
-header,
-footer {
+nav {
     display: block;
 }
 
@@ -129,12 +127,7 @@ ul.topnav li.brand-container {
     }
 }
 
-
-
-
-
-
-
+/*#################### Akhir Navbar ########################*/
 
 
 

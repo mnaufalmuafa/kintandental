@@ -8,7 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap/css/bootstrap.css') ?>">
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/beranda.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/carousel.css') ?>">
     </head>
     <body>
         <nav>
@@ -48,7 +49,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li class="dropdownIcon" id="intentDropDown"><a href="javascript:void(0)">&#9776;</a></li>
             </ul>
         </nav>
-        <h4 id="h4" class="h4">Daftar Pemeriksaan</h4>
+        
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 bg" src="<?= base_url('assets/img/bg_carousel.png') ?>" alt="First slide">
+                    <img class="icon" src="<?= base_url('assets/icon/ic_pemeriksaan.png') ?>">
+                    <h1 class="indikatorBanyak">0</h1>
+                    <h1 class="item-carousel-ket">Pemeriksaan</h1>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 bg" src="<?= base_url('assets/img/bg_carousel.png') ?>" alt="Second slide">
+                    <img class="icon" src="<?= base_url('assets/icon/ic_dokter.png') ?>">
+                    <h1 class="indikatorBanyak">0</h1>
+                    <h1 class="item-carousel-ket">Dokter Gigi</h1>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 bg" src="<?= base_url('assets/img/bg_carousel.png') ?>" alt="Third slide">
+                    <img class="icon" src="<?= base_url('assets/icon/ic_pasien.png') ?>">
+                    <h1 class="indikatorBanyak">0</h1>
+                    <h1 class="item-carousel-ket">Pasien</h1>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 bg" src="<?= base_url('assets/img/bg_carousel.png') ?>" alt="Third slide">
+                    <img class="icon" src="<?= base_url('assets/icon/ic_layanan.png') ?>">
+                    <h1 class="indikatorBanyak">0</h1>
+                    <h1 class="item-carousel-ket">Layanan</h1>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+        
         <script src="<?= base_url('assets/js/jquery-3.4.1.min.js') ?>"></script>
         <script src="<?= base_url('assets/css/bootstrap/js/bootstrap.js') ?>"></script>
         <script>
@@ -82,7 +120,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             function jqueryResize() {
                 var width = $(window).width();
-                $('.h4').html(width);
                 if (width < 681) {
                     $("#link-5").html(valLink1);
                     $("#link-4").html(valLink2);
