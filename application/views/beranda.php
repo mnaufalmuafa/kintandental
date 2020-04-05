@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li 
                     class="topnav-right"
                     id="link-1">
-                    <button class="btn btn-logout rounded-0">Logout</button>
+                    <button class="btn btn-logout rounded-0" onclick="logout()">Logout</button>
                 </li>
                 
                 <li 
@@ -179,7 +179,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         $('#dropdownClick').attr('class','topnav');
                     }
                 });
+                
             });
+            
+            function logout() {
+                window.location.href = 'http://localhost/kintandental/index.php/logout/index';
+            }
             
             function jqueryResize() {
                 var width = $(window).width();

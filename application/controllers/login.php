@@ -12,6 +12,10 @@ class login extends CI_Controller {
     public function intentToBeranda() {
         redirect('beranda/index');
     }
+    
+    public function logout() {
+        redirect('login/index');
+    }
 }
 
 
