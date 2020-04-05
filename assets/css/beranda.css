@@ -38,6 +38,19 @@
     text-decoration: none;
 }
 
+table {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+table thead tr th {
+    padding: 2px;
+}
+
+footer {
+    background-color: #E1D9D9;
+}
+
 @media screen and (max-width: 680px) {
     .container_satu {
         padding-left: 25px;

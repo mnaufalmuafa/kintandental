@@ -97,6 +97,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             +
         </a>
         
+        <div class="tabel" style="overflow-x: auto;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Dokter</th>
+                        <th>Pasien</th>
+                        <th>Tanggal</th>
+                        <th>Jam</th>
+                        <th>Layanan</th>
+                        <th>Tarif</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Drg. Kintan Rahma</td>
+                        <td>Duta Dutaa</td>
+                        <td>23 September 2020</td>
+                        <td>12:12</td>
+                        <td>Pembersihan Karang Gigi</td>
+                        <td>500.000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Drg. Kintan Rahma</td>
+                        <td>Duta Dutaa</td>
+                        <td>23 September 2020</td>
+                        <td>12:12</td>
+                        <td>Pembersihan Karang Gigi</td>
+                        <td>500.000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Drg. Kintan Rahma</td>
+                        <td>Duta Dutaa</td>
+                        <td>23 September 2020</td>
+                        <td>12:12</td>
+                        <td>Pembersihan Karang Gigi</td>
+                        <td>500.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <footer class="footer-copyright text-center py-3 mt-5">
+            © 2020 Kintan Dental • All rights reserved • Love from Tegal
+        </footer>
+        
         <script src="<?= base_url('assets/js/jquery-3.4.1.min.js') ?>"></script>
         <script src="<?= base_url('assets/css/bootstrap/js/bootstrap.js') ?>"></script>
         <script>
@@ -110,7 +159,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 valLink2 = $('#link-2').html();
                 valLink4 = $('#link-4').html();
                 valLink5 = $('#link-5').html();
-                if ($(window).width() < 681) {
+                if ($(window).width() < 678) {
                     $("#link-5").html(valLink1);
                     $("#link-4").html(valLink2);
                     $("#link-2").html(valLink4);
@@ -134,7 +183,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             function jqueryResize() {
                 var width = $(window).width();
-                if (width < 681) {
+                if (width < 678) {
                     $("#link-5").html(valLink1);
                     $("#link-4").html(valLink2);
                     $("#link-2").html(valLink4);
