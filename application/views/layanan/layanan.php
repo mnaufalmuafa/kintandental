@@ -196,6 +196,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/controller/Navbar.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
+        <script src="<?= base_url('assets/js/controller/tooltipIcAksi.js') ?>"></script>
         <script>
             $(document).ready(function(){
                 
@@ -209,11 +210,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     modal.find('#inputId').val(id);
                     modal.find('#inputNama').val(nama);
                     modal.find('#inputTarif').val(tarif);
-                });
-                
-                tippy('.ic-aksi',{
-                    content : 'Tooltip',
-                    placement : 'bottom'
                 });
                 
             });

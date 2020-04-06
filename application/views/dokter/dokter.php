@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <div class="container_satu w-100 d-flex" >
             <h4>Daftar Dokter</h4>
-            <button class="btn btn-primer ml-auto" id="btnInputDokter"> Tambah Dokter </button>
+            <button class="btn btn-primer ml-auto btn-collapsed" id="btnInputDokter"> Tambah Dokter </button>
         </div>
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px; margin-bottom: 70px;">
@@ -329,70 +329,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/css/bootstrap/js/bootstrap.js') ?>"></script>
         <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
         <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-        <script>
-            var valLink1;
-            var valLink2;
-            var valLink3;
-            var valLink4;
-            $(document).ready(function(){
-                
-                valLink1 = $('#link-1').html();
-                valLink2 = $('#link-2').html();
-                valLink4 = $('#link-4').html();
-                valLink5 = $('#link-5').html();
-                if ($(window).width() < 678) {
-                    $("#link-5").html(valLink1);
-                    $("#link-4").html(valLink2);
-                    $("#link-2").html(valLink4);
-                    $("#link-1").html(valLink5);
-                    $("#btnInputDokter").hide();
-                }
-                else {
-                    $('#FAB').hide();
-                }
-                
-                $('#intentDropDown').click(function(){
-                    var kelas = $('#dropdownClick').attr('class');
-                    if (kelas === 'topnav') {
-                        $('#dropdownClick').attr('class','topnav responsive');
-                    }
-                    else {
-                        $('#dropdownClick').attr('class','topnav');
-                    }
-                });
-                
-            });
-            
-            tippy('.ic-aksi',{
-                content : 'Tooltip',
-                placement : 'bottom'
-            });
-            
-            function logout() {
-                window.location.href = 'http://localhost/kintandental/index.php/logout/index';
-            }
-            
-            function jqueryResize() {
-                var width = $(window).width();
-                if (width < 678) {
-                    $("#link-5").html(valLink1);
-                    $("#link-4").html(valLink2);
-                    $("#link-2").html(valLink4);
-                    $("#link-1").html(valLink5);
-                    $('#FAB').show();
-                    $('#btnInputDokter').hide();
-                }
-                else {
-                    $("#link-5").html(valLink5);
-                    $("#link-4").html(valLink4);
-                    $("#link-2").html(valLink2);
-                    $("#link-1").html(valLink1);
-                    $('#FAB').hide();
-                    $('#btnInputDokter').show();
-                }
-            }
-
-            $(window).on('resize', jqueryResize);
-        </script>
+        <script src="<?= base_url('assets/js/controller/FAB.js') ?>"></script>
+        <script src="<?= base_url('assets/js/controller/Navbar.js') ?>"></script>
+        <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
+        <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
+        <script src="<?= base_url('assets/js/controller/tooltipIcAksi.js') ?>"></script>
     </body>
 </html>

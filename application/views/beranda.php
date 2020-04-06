@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <div class="container_satu w-100 d-flex" >
             <h4>Daftar Pemeriksaan</h4>
-            <button class="btn btn-primer ml-auto" id="btnInputPemeriksaan"> Input Pemeriksaan </button>
+            <button class="btn btn-primer ml-auto btn-collapsed" id="btnInputPemeriksaan"> Input Pemeriksaan </button>
         </div>
         
         <a href="#" class="FAB" id="FAB">
@@ -148,65 +148,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <script src="<?= base_url('assets/js/jquery-3.4.1.min.js') ?>"></script>
         <script src="<?= base_url('assets/css/bootstrap/js/bootstrap.js') ?>"></script>
-        <script>
-            var valLink1;
-            var valLink2;
-            var valLink3;
-            var valLink4;
-            $(document).ready(function(){
-                
-                valLink1 = $('#link-1').html();
-                valLink2 = $('#link-2').html();
-                valLink4 = $('#link-4').html();
-                valLink5 = $('#link-5').html();
-                if ($(window).width() < 678) {
-                    $("#link-5").html(valLink1);
-                    $("#link-4").html(valLink2);
-                    $("#link-2").html(valLink4);
-                    $("#link-1").html(valLink5);
-                    $("#btnInputPemeriksaan").hide();
-                }
-                else {
-                    $('#FAB').hide();
-                }
-                
-                $('#intentDropDown').click(function(){
-                    var kelas = $('#dropdownClick').attr('class');
-                    if (kelas === 'topnav') {
-                        $('#dropdownClick').attr('class','topnav responsive');
-                    }
-                    else {
-                        $('#dropdownClick').attr('class','topnav');
-                    }
-                });
-                
-            });
-            
-            function logout() {
-                window.location.href = 'http://localhost/kintandental/index.php/logout/index';
-            }
-            
-            function jqueryResize() {
-                var width = $(window).width();
-                if (width < 678) {
-                    $("#link-5").html(valLink1);
-                    $("#link-4").html(valLink2);
-                    $("#link-2").html(valLink4);
-                    $("#link-1").html(valLink5);
-                    $('#FAB').show();
-                    $('#btnInputPemeriksaan').hide();
-                }
-                else {
-                    $("#link-5").html(valLink5);
-                    $("#link-4").html(valLink4);
-                    $("#link-2").html(valLink2);
-                    $("#link-1").html(valLink1);
-                    $('#FAB').hide();
-                    $('#btnInputPemeriksaan').show();
-                }
-            }
-
-            $(window).on('resize', jqueryResize);
-        </script>
+        <script src="<?= base_url('assets/js/controller/FAB.js') ?>"></script>
+        <script src="<?= base_url('assets/js/controller/Navbar.js') ?>"></script>
+        <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
+        <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
     </body>
 </html>
