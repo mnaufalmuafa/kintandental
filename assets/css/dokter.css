@@ -22,3 +22,9 @@
 .ic-aksi:hover {
     cursor: pointer;
 }
+
+@media screen and (max-width: 680px) {
+    .container-satu {
+        padding-left: 25px !important;
+    }
+}
