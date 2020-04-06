@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li 
                     class="topnav-right"
                     id="link-3">
-                    <a href="#pasien">Pasien</a>
+                    <a href="http://localhost/kintandental/index.php/pasien">Pasien</a>
                 </li>
                 <li 
                     class="topnav-right"

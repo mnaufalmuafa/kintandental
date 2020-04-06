@@ -4,11 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Daftar Dokter - Kintan Dental</title>
+        <title>Daftar Pasien - Kintan Dental</title>
         <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap/css/bootstrap.css') ?>">
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/dokter.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/pasien.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
         
         <style>
@@ -59,12 +59,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li 
                     class="topnav-right"
                     id="link-3">
-                    <a href="http://localhost/kintandental/index.php/pasien">Pasien</a>
+                    <a class="link-active" href="#">Pasien</a>
                 </li>
                 <li 
                     class="topnav-right"
                     id="link-4">
-                    <a class="link-active">Dokter</a>
+                    <a href="http://localhost/kintandental/index.php/dokter">Dokter</a>
                 </li>
                 
                 <li 
@@ -78,8 +78,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </nav>
         
         <div class="container_satu w-100 d-flex" >
-            <h4>Daftar Dokter</h4>
-            <button class="btn btn-primer ml-auto" id="btnInputDokter"> Tambah Dokter </button>
+            <h4>Daftar Pasien</h4>
+            <button class="btn btn-primer ml-auto" id="btnInputPasien"> Tambah Pasien </button>
         </div>
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px; margin-bottom: 70px;">
@@ -89,9 +89,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <th>No</th>
                         <th>NIK</th>
                         <th>Nama</th>
-                        <th>SIP</th>
-                        <th>Shift</th>
-                        <th>Gaji</th>
+                        <th>Alamat</th>
+                        <th>No Telp</th>
+                        <th>Pekerjaan</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -99,220 +99,147 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <tr>
                         <td>1</td>
                         <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
+                        <td>Duta Dutaa</td>
+                        <td>Bumijawa</td>
+                        <td>082321345764</td>
+                        <td>Peternak</td>
                         <td>
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
+                                     data-tippy-content="Edit Pasien">
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                                     data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
+                        <td>Duta Dutaa</td>
+                        <td>Bumijawa</td>
+                        <td>082321345764</td>
+                        <td>Peternak</td>
                         <td>
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
+                                     data-tippy-content="Edit Pasien">
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                                     data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
+                        <td>Duta Dutaa</td>
+                        <td>Bumijawa</td>
+                        <td>082321345764</td>
+                        <td>Peternak</td>
                         <td>
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
+                                     data-tippy-content="Edit Pasien">
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                                     data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
+                        <td>Duta Dutaa</td>
+                        <td>Bumijawa</td>
+                        <td>082321345764</td>
+                        <td>Peternak</td>
                         <td>
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
+                                     data-tippy-content="Edit Pasien">
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                                     data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
+                        <td>Duta Dutaa</td>
+                        <td>Bumijawa</td>
+                        <td>082321345764</td>
+                        <td>Peternak</td>
                         <td>
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
+                                     data-tippy-content="Edit Pasien">
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                                     data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
+                        <td>Duta Dutaa</td>
+                        <td>Bumijawa</td>
+                        <td>082321345764</td>
+                        <td>Peternak</td>
                         <td>
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
+                                     data-tippy-content="Edit Pasien">
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                                     data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
+                        <td>Duta Dutaa</td>
+                        <td>Bumijawa</td>
+                        <td>082321345764</td>
+                        <td>Peternak</td>
                         <td>
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
+                                     data-tippy-content="Edit Pasien">
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                                     data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
+                        <td>Duta Dutaa</td>
+                        <td>Bumijawa</td>
+                        <td>082321345764</td>
+                        <td>Peternak</td>
                         <td>
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
+                                     data-tippy-content="Edit Pasien">
                                 <img 
                                      class="ic-aksi" 
                                      src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                                     data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                </tbody>
             </table>    
         </div>
         
@@ -345,7 +272,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $("#link-4").html(valLink2);
                     $("#link-2").html(valLink4);
                     $("#link-1").html(valLink5);
-                    $("#btnInputDokter").hide();
+                    $("#btnInputPasien").hide();
                 }
                 else {
                     $('#FAB').hide();
@@ -380,7 +307,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $("#link-2").html(valLink4);
                     $("#link-1").html(valLink5);
                     $('#FAB').show();
-                    $('#btnInputDokter').hide();
+                    $('#btnInputPasien').hide();
                 }
                 else {
                     $("#link-5").html(valLink5);
@@ -388,7 +315,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $("#link-2").html(valLink2);
                     $("#link-1").html(valLink1);
                     $('#FAB').hide();
-                    $('#btnInputDokter').show();
+                    $('#btnInputPasien').show();
                 }
             }
 
