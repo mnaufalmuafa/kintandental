@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li 
                     class="topnav-right"
                     id="link-2">
-                    <a href="#layanan">Layanan</a>
+                    <a href="http://localhost/kintandental/index.php/layanan">Layanan</a>
                 </li>
                 <li 
                     class="topnav-right"
