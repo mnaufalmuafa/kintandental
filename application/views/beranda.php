@@ -93,7 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <button class="btn btn-primer ml-auto btn-collapsed" id="btnInputPemeriksaan"> Input Pemeriksaan </button>
         </div>
         
-        <a href="#" class="FAB" id="FAB">
+        <a href="http://localhost/kintandental/index.php/beranda/inputPemeriksaan" class="FAB" id="FAB">
             +
         </a>
         
@@ -152,5 +152,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/controller/Navbar.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
+        <script>
+            $(document).ready(function(){
+                $('#btnInputPemeriksaan').on('click',function(){
+                    $(location).attr('href','http://localhost/kintandental/index.php/beranda/inputPemeriksaan');
+                });
+            });
+        </script>
     </body>
 </html>
