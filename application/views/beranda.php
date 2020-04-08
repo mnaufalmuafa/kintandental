@@ -11,6 +11,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url('assets/css/beranda.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/carousel.css') ?>">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+        <style>
+            select, input, tr {
+                background-color: rgba(255,228,196,0) !important;
+            }
+            
+            option {
+                background-color: rgba(255,228,196,0.35);
+            }
+            
+            input {
+                border : 1px solid #C0C0C0;
+            }
+            
+            table {
+                z-index: 1;
+            }
+            
+            .FAB {
+                z-index: 2;
+            }
+        </style>
     </head>
     <body>
         <nav>
@@ -97,8 +119,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             +
         </a>
         
-        <div class="tabel" style="overflow-x: auto;">
-            <table class="table table-bordered">
+        <div class="tabel" style="overflow-x: auto; margin-top: 20px;">
+            <table class="table table-bordered p-relative" id="tabel">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -124,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td>2</td>
                         <td>Drg. Kintan Rahma</td>
                         <td>Duta Dutaa</td>
-                        <td>23 September 2020</td>
+                        <td>24 September 2020</td>
                         <td>12:12</td>
                         <td>Pembersihan Karang Gigi</td>
                         <td>500.000</td>
@@ -133,7 +155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td>3</td>
                         <td>Drg. Kintan Rahma</td>
                         <td>Duta Dutaa</td>
-                        <td>23 September 2020</td>
+                        <td>25 September 2020</td>
                         <td>12:12</td>
                         <td>Pembersihan Karang Gigi</td>
                         <td>500.000</td>
@@ -148,12 +170,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <script src="<?= base_url('assets/js/jquery-3.4.1.min.js') ?>"></script>
         <script src="<?= base_url('assets/css/bootstrap/js/bootstrap.js') ?>"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
         <script src="<?= base_url('assets/js/controller/FAB.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/Navbar.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
         <script>
             $(document).ready(function(){
+                $('#tabel').DataTable();
                 $('#btnInputPemeriksaan').on('click',function(){
                     $(location).attr('href','http://localhost/kintandental/index.php/beranda/inputPemeriksaan');
                 });
