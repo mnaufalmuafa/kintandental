@@ -28,6 +28,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             form.container-custom {
                 margin-bottom: 130px;
             }
+            
+            select {
+                border-color: #C0C0C0 !important;
+            }
         </style>
     </head>
     <body>

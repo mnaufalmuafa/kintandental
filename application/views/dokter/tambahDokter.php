@@ -31,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             select {
                 background-color: rgba(1,9,9,0) !important;
+                border: 1px solid #C0C0C0;
             }
             
             select option {

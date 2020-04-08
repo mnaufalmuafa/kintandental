@@ -48,7 +48,7 @@ ul.breadcrumb-custom li a:hover {
 
 input, select, option {
     background-color: rgba(0,0,0,0) !important;
-    border: 1px solid rgba(0,0,0,0.8) !important;
+    border: 1px solid #C0C0C0 !important;
 }
 
 a {
