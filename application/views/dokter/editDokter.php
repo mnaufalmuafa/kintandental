@@ -32,6 +32,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             a {
                 text-decoration: none !important;
             }
+            
+            input.disabled {
+                background-color: rgb(220,220,220) !important;
+            }
+            
+            select {
+                background-color: rgba(1,9,9,0) !important;
+            }
+            
+            select option {
+                background: rgba(255,228,196,0.35) !important;
+            }
+            
         </style>
     </head>
     <body>
@@ -87,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <input 
                            type="number" 
                            name="nik" 
-                           class="form-control" 
+                           class="form-control disabled" 
                            id="inputNIK" 
                            placeholder="NIK" 
                            max="9999999999999999"
@@ -101,7 +114,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <input 
                            type="text" 
                            value = "Duta Dutaa"
-                           name="nama" class="form-control" id="inputNama" placeholder="Nama" required readonly disabled>
+                           name="nama" class="form-control disabled" id="inputNama" placeholder="Nama" 
+                           required readonly disabled>
                 </div>
             </div>
             <div class="form-group row">

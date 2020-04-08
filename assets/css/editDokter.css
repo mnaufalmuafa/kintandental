@@ -50,7 +50,3 @@ input, select, option {
     background-color: rgba(0,0,0,0) !important;
     border: 1px solid rgba(0,0,0,0.8) !important;
 }
-
-a {
-    text-decoration: none;
-}
