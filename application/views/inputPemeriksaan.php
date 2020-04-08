@@ -28,6 +28,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             form.container-custom {
                 margin-bottom: 130px;
             }
+            
+            input.inputJam {
+                border-color: rgba(0,0,0,0);
+            }
         </style>
     </head>
     <body>
@@ -85,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                type="text" name="dokter" 
                                class="form-control" id="inputDokter" placeholder="Dokter"readonly required>
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-info btn-flat" data-toggle="modal" data-target="#modalDokter">Pilih</button>
+                            <button type="button" class="btn btn-primer" data-toggle="modal" data-target="#modalDokter">Pilih</button>
                         </span>
                     </div>
                 </div>
@@ -98,7 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                type="text" name="pasien" 
                                class="form-control" id="inputPasien" placeholder="Pasien" readonly required>
                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-info btn-flat" data-toggle="modal" data-target="#modalPasien">Pilih</button>
+                            <button type="button" class="btn btn-primer" data-toggle="modal" data-target="#modalPasien">Pilih</button>
                         </span>
                     </div>
                 </div>
@@ -112,7 +116,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Jam</label>
                 <div class="col-sm-10">
-                    <input type="time" class="form-control" id="inputPassword" placeholder="Waktu pemeriksaan" required>
+                    <input type="time" class="form-control inputJam" id="inputJam" placeholder="Waktu pemeriksaan" required>
                 </div>
             </div>
             <div class="form-group row">
@@ -123,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                type="text" name="layanan" 
                                class="form-control" id="inputLayanan" placeholder="Layanan" readonly required>
                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-info btn-flat" data-toggle="modal" data-target="#modalLayanan">Pilih</button>
+                            <button type="button" class="btn btn-primer" data-toggle="modal" data-target="#modalLayanan">Pilih</button>
                         </span>
                     </div>
                 </div>
