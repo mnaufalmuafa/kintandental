@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Edit Dokter - Kintan Dental</title>
+        <title>Edit Pasien - Kintan Dental</title>
         <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap/css/bootstrap.css') ?>">
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/editDokter.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/tambahDokter.css') ?>">
         <style>
             .btn-primer {
                 background-color: #A66C20;
@@ -27,10 +27,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             form.container-custom {
                 margin-bottom: 130px;
-            }
-            
-            a {
-                text-decoration: none !important;
             }
         </style>
     </head>
@@ -74,11 +70,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </nav>
         
         <ul class="breadcrumb-custom">
-            <li><a href="http://localhost/kintandental/index.php/dokter">Dokter</a></li>
-            <li class="active">Edit Dokter</li>
+            <li><a href="http://localhost/kintandental/index.php/pasien">Pasien</a></li>
+            <li class="active">Edit Pasien</li>
         </ul>
         
-        <h3>Edit Dokter</h3>
+        <h3>Edit Pasien</h3>
         
         <form class="container-custom" method="post">
             <div class="form-group row">
@@ -91,52 +87,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            id="inputNIK" 
                            placeholder="NIK" 
                            max="9999999999999999"
-                           value="1234567890123456"
-                           required readonly disabled>
+                           value="332956296500007"
+                           required readonly>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-10">
                     <input 
-                           type="text" 
-                           value = "Duta Dutaa"
-                           name="nama" class="form-control" id="inputNama" placeholder="Nama" required readonly disabled>
+                           type="text" name="nama" 
+                           class="form-control" id="inputNama" 
+                           placeholder="Nama"
+                           value="Duta Dutaa"
+                           required readonly>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="str" class="col-sm-2 col-form-label">No STR</label>
+                <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
                 <div class="col-sm-10">
+                    <input type="text" name="alamat" class="form-control" id="inputAlamat" placeholder="Alamat" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="noTelp" class="col-sm-2 col-form-label">No Telp</label>
+                <div class="col-sm-2">
                     <input 
-                           type="number" 
-                           name="str" 
+                           type="tel" 
+                           name="noTelp"
+                           maxlength="12"
+                           minlength="10"
+                           pattern="[0]{1}[8]{1}[0-9]{8,10}"
                            class="form-control" 
-                           id="inputSTR" 
-                           placeholder="STR"
-                           max="9999999999999999"
+                           id="inputNoTelp" 
+                           placeholder="08xxxxxxxxxx" 
                            required>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="shift" class="col-sm-2 col-form-label">Shift</label>
-                <div class="col-sm-2">
-                    <select name="gaji" class="form-control" id="inputShift" required>
-                        <option value="Pagi" selected>Pagi</option>
-                        <option value="Siang">Siang</option>
-                        <option value="Malam">Malam</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="gaji" class="col-sm-2 col-form-label">Gaji</label>
+                <label for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</label>
                 <div class="col-sm-10">
-                    <input type="number" name="gaji" class="form-control" id="inputGaji" placeholder="Gaji" required>
+                    <input type="text" name="pekerjaan" class="form-control" id="inputPekerjaan" placeholder="Pekerjaan" required>
                 </div>
             </div>
             <button 
                     type="submit" 
-                    name="btnEditDokter"
-                    class="btn btn-primer mt-3">Edit Dokter</button>
+                    name="btnEditPasien"
+                    class="btn btn-primer mt-3">Tambah Pasien</button>
         </form>
         
         <footer class="footer-copyright text-center py-3 mt-5 fixed-bottom">

@@ -12,6 +12,13 @@ class pasien extends CI_Controller {
             redirect('pasien');
         }
     }
+    
+    public function editPasien($id) {
+        $this->load->view('pasien/editPasien');
+        if (isset($_POST['btnEditPasien'])){
+            redirect('pasien');
+        }
+    }
 }
 
 ?>

@@ -107,14 +107,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td>082321345764</td>
                         <td>Peternak</td>
                         <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Pasien">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Pasien">
+                            <img 
+                                 class="ic-aksi ic-aksi-edit" 
+                                 src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
+                                 data-tippy-content="Edit Pasien"
+                                 data-id="1">
+                            <img 
+                                 class="ic-aksi" 
+                                 src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
+                                 data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
                     <tr>
@@ -125,122 +126,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td>082321345764</td>
                         <td>Peternak</td>
                         <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Pasien">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Pasien">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>3328112306000007</td>
-                        <td>Duta Dutaa</td>
-                        <td>Bumijawa</td>
-                        <td>082321345764</td>
-                        <td>Peternak</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Pasien">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Pasien">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>3328112306000007</td>
-                        <td>Duta Dutaa</td>
-                        <td>Bumijawa</td>
-                        <td>082321345764</td>
-                        <td>Peternak</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Pasien">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Pasien">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>3328112306000007</td>
-                        <td>Duta Dutaa</td>
-                        <td>Bumijawa</td>
-                        <td>082321345764</td>
-                        <td>Peternak</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Pasien">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Pasien">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>3328112306000007</td>
-                        <td>Duta Dutaa</td>
-                        <td>Bumijawa</td>
-                        <td>082321345764</td>
-                        <td>Peternak</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Pasien">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Pasien">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>3328112306000007</td>
-                        <td>Duta Dutaa</td>
-                        <td>Bumijawa</td>
-                        <td>082321345764</td>
-                        <td>Peternak</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Pasien">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Pasien">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>3328112306000007</td>
-                        <td>Duta Dutaa</td>
-                        <td>Bumijawa</td>
-                        <td>082321345764</td>
-                        <td>Peternak</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Pasien">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Pasien">
+                            <img 
+                                 class="ic-aksi ic-aksi-edit" 
+                                 src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
+                                 data-tippy-content="Edit Pasien"
+                                 data-id="2">
+                            <img 
+                                 class="ic-aksi" 
+                                 src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
+                                 data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
             </table>    
@@ -268,6 +162,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             function intentToTambahPasien() {
                 window.location.href="http://localhost/kintandental/index.php/pasien/tambahPasien";
             }
+            $(document).ready(function(){
+                $('.ic-aksi-edit').on('click',function(){
+                    var url = 'http://localhost/kintandental/index.php/pasien/editPasien/';
+                    var id = $(this).attr('data-id');
+                    $(location).attr('href',url+id);
+                });
+            });
         </script>
     </body>
 </html>
