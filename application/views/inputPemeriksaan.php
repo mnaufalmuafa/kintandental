@@ -32,6 +32,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             input.inputJam {
                 border-color: rgba(0,0,0,0);
             }
+            
+            .modal-header {
+                background-color: #DEB887 !important;
+            }
+            
+            .modal-body, .modal-footer {
+                background: rgba(255,228,196,0.35) !important;
+            }
+            
+            .inputJam {
+                background-color: rgba(0,0,0,0) !important;
+                border-color: #C0C0C0 !important;
+            }
+            
         </style>
     </head>
     <body>
@@ -172,7 +186,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </table>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+                            <button type="button" class="btn btn-primer" data-dismiss="modal">Tutup</button>
                         </div>
                     </form>
                 </div> 
@@ -209,7 +223,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </table>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+                            <button type="button" class="btn btn-primer" data-dismiss="modal">Tutup</button>
                         </div>
                     </form>
                 </div> 
@@ -246,7 +260,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </table>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+                            <button type="button" class="btn btn-primer" data-dismiss="modal">Tutup</button>
                         </div>
                     </form>
                 </div> 
