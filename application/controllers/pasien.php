@@ -5,6 +5,13 @@ class pasien extends CI_Controller {
     public function index() {
         $this->load->view('pasien/pasien');
     }
+    
+    public function tambahPasien() {
+        $this->load->view('pasien/tambahPasien');
+        if (isset($_POST['btnTambahPasien'])) {
+            redirect('pasien');
+        }
+    }
 }
 
 ?>

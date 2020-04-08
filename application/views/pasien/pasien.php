@@ -79,7 +79,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <div class="container_satu w-100 d-flex" >
             <h4>Daftar Pasien</h4>
-            <button class="btn btn-primer ml-auto btn-collapsed" id="btnInputPasien"> Tambah Pasien </button>
+            <button 
+                    class="btn btn-primer ml-auto btn-collapsed" 
+                    id="btnInputPasien"
+                    onclick="intentToTambahPasien()"> Tambah Pasien </button>
         </div>
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px; margin-bottom: 70px;">
@@ -243,7 +246,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </table>    
         </div>
         
-        <a href="#" class="FAB p" id="FAB">
+        <a href="http://localhost/kintandental/index.php/pasien/tambahPasien" class="FAB p" id="FAB">
             +
         </a>
         
@@ -261,5 +264,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/tooltipIcAksi.js') ?>"></script>
+        <script>
+            function intentToTambahPasien() {
+                window.location.href="http://localhost/kintandental/index.php/pasien/tambahPasien";
+            }
+        </script>
     </body>
 </html>
