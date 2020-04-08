@@ -36,6 +36,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             .page-footer {
                 z-index: 1;
             }
+            
+            .modal-header {
+                background-color: #DEB887 !important;
+            }
+            
+            .modal-body {
+                background: rgba(255,228,196,0.35) !important;
+            }
         </style>
     </head>
     <body>
