@@ -12,6 +12,13 @@ class dokter extends CI_Controller {
             redirect('dokter');
         }
     }
+    
+    public function editDokter($id) {
+        $this->load->view('dokter/editDokter');
+        if (isset($_POST['btnEditDokter'])){
+            redirect('dokter');
+        }
+    }
 }
 
 ?>

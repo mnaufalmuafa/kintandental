@@ -107,212 +107,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td>Malam</td>
                         <td>2.300.000</td>
                         <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                            <img 
+                                 class="ic-aksi ic-aksi-edit"
+                                 src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
+                                 data-tippy-content="Edit Dokter"
+                                 data-id="1">
+                            <img 
+                                 class="ic-aksi" 
+                                 src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
+                                 data-tippy-content="Hapus Dokter">
                         </td>
                     </tr>
                     <tr>
-                        <td>2</td>
+                        <td>1</td>
                         <td>3328112306000007</td>
                         <td>Drg. Kintan Rahma</td>
                         <td>12345</td>
                         <td>Malam</td>
                         <td>2.300.000</td>
                         <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                     data-tippy-content="Edit Dokter">
-                                <img 
-                                     class="ic-aksi" 
-                                     src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                     data-tippy-content="Hapus Dokter">
+                            <img 
+                                 class="ic-aksi ic-aksi-edit"
+                                 src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
+                                 data-tippy-content="Edit Dokter"
+                                 data-id="2">
+                            <img 
+                                 class="ic-aksi" 
+                                 src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
+                                 data-tippy-content="Hapus Dokter">
                         </td>
                     </tr>
                 </tbody>
@@ -341,6 +163,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             function intentToTambahDokter() {
                 window.location.href = 'http://localhost/kintandental/index.php/dokter/tambahDokter';
             }
+            $(document).ready(function(){
+                $('.ic-aksi-edit').on('click',function(){
+                    var url = 'http://localhost/kintandental/index.php/dokter/editDokter/';
+                    var id = $(this).attr('data-id');
+                    $(location).attr('href',url+id);
+                });
+            });
         </script>
     </body>
 </html>
