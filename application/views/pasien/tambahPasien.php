@@ -9,17 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/tambahDokter.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/view/tambahPasien.css') ?>">
         <style>
-            .btn-primer {
-                background-color: #A66C20;
-                color: white;
-                float: right;
-            }
-
-            .btn-primer {
-                color: white !important;
-            }
             
             footer {
                 background-color: #E1D9D9;

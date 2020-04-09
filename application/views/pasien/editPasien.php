@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/tambahDokter.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/view/editPasien.css') ?>">
         <style>
             .btn-primer {
                 background-color: #A66C20;
