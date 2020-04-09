@@ -114,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <button 
                     type="submit" 
                     name="btnEditPasien"
-                    class="btn btn-primer mt-3 mb-5">Tambah Pasien</button>
+                    class="btn btn-primer mt-3 mb-5">Edit Pasien</button>
         </form>
         
         <footer class="footer-copyright text-center py-3 mt-5 fixed-bottom">

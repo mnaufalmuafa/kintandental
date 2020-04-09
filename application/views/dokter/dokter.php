@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <th>No</th>
                         <th>NIK</th>
                         <th>Nama</th>
-                        <th>SIP</th>
+                        <th>STR</th>
                         <th>Shift</th>
                         <th>Gaji</th>
                         <th>Aksi</th>
