@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/elemen/navbar.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/elemen/breadcrumb.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/view/editPasien.css') ?>">
     </head>
     <body>
@@ -113,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <button 
                     type="submit" 
                     name="btnEditPasien"
-                    class="btn btn-primer mt-3">Tambah Pasien</button>
+                    class="btn btn-primer mt-3 mb-5">Tambah Pasien</button>
         </form>
         
         <footer class="footer-copyright text-center py-3 mt-5 fixed-bottom">

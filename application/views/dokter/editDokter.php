@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/elemen/navbar.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/elemen/breadcrumb.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/view/editDokter.css') ?>">
     </head>
     <body>
@@ -105,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </select>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mb-3">
                 <label for="gaji" class="col-sm-2 col-form-label">Gaji</label>
                 <div class="col-sm-10">
                     <input type="number" name="gaji" class="form-control" id="inputGaji" placeholder="Gaji" required>
@@ -114,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <button 
                     type="submit" 
                     name="btnEditDokter"
-                    class="btn btn-primer mt-3">Edit Dokter</button>
+                    class="btn btn-primer mb-5">Edit Dokter</button>
         </form>
         
         <footer class="footer-copyright text-center py-3 mt-5 fixed-bottom">
