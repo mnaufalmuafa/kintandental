@@ -8,42 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap/css/bootstrap.css') ?>">
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/layanan.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/view/layanan.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
-        
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
         <style>
-            .FAB {
-                position: fixed;
-                right: 30px;
-                bottom: 30px;
-                text-decoration: none;
-                background-color: #A66C20;
-                color: white;
-                padding: 12px 18px;
-                border-radius: 50%;
-                font-size: 25px;
-                width: 50px;
-                height: 50px;
-                z-index: 2;
-            }
 
-            .FAB:hover {
-                background-color: #c78834;
-                color: white;
-                text-decoration: none;
-            }
-            
-            .page-footer {
-                z-index: 1;
-            }
-            
-            .modal-header {
-                background-color: #DEB887 !important;
-            }
-            
-            .modal-body {
-                background: rgba(255,228,196,0.35) !important;
-            }
         </style>
     </head>
     <body>
@@ -121,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px; margin-bottom: 70px;">
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="tabel">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -199,29 +168,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/jquery-3.4.1.min.js') ?>"></script>
         <script src="<?= base_url('assets/css/bootstrap/js/bootstrap.js') ?>"></script>
         <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
         <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
         <script src="<?= base_url('assets/js/controller/FAB.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/Navbar.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/tooltipIcAksi.js') ?>"></script>
-        <script>
-            $(document).ready(function(){
-                
-                $('#ModalEditLayanan').on('show.bs.modal',function(event) {
-                    var button = $(event.relatedTarget);
-                    var id = button.data('id');
-                    var nama = button.data('nama');
-                    var tarif = button.data('tarif');
-                    
-                    var modal = $(this);
-                    modal.find('#inputId').val(id);
-                    modal.find('#inputNama').val(nama);
-                    modal.find('#inputTarif').val(tarif);
-                });
-                
-            });
-
-        </script>
+        <script src="<?= base_url('assets/js/viewController/layanan.js') ?>"></script>
     </body>
 </html>
