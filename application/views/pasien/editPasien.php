@@ -8,31 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap/css/bootstrap.css') ?>">
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/elemen/navbar.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/view/editPasien.css') ?>">
-        <style>
-            .btn-primer {
-                background-color: #A66C20;
-                color: white;
-                float: right;
-            }
-
-            .btn-primer {
-                color: white !important;
-            }
-            
-            footer {
-                background-color: #E1D9D9;
-            }
-            
-            form.container-custom {
-                margin-bottom: 130px;
-            }
-            
-            input.disabled {
-                background-color: rgb(220,220,220) !important;
-            }
-        </style>
     </head>
     <body>
         <nav>

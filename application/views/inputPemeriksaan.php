@@ -8,45 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap/css/bootstrap.css') ?>">
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/elemen/navbar.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/elemen/breadcrumb.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/view/inputPemeriksaan.css') ?>">
-        <style>
-            .btn-primer {
-                background-color: #A66C20;
-                color: white;
-                float: right;
-            }
-
-            .btn-primer {
-                color: white !important;
-            }
-            
-            footer {
-                background-color: #E1D9D9;
-            }
-            
-            form.container-custom {
-                margin-bottom: 130px;
-            }
-            
-            input.inputJam {
-                border-color: rgba(0,0,0,0);
-            }
-            
-            .modal-header {
-                background-color: #DEB887 !important;
-            }
-            
-            .modal-body, .modal-footer {
-                background: rgba(255,228,196,0.35) !important;
-            }
-            
-            .inputJam {
-                background-color: rgba(0,0,0,0) !important;
-                border-color: #C0C0C0 !important;
-            }
-            
-        </style>
     </head>
     <body>
         <nav>
@@ -273,26 +237,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/controller/Navbar.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
-        <script>
-            $(document).ready(function(){
-                var d = new Date();
-                var tanggal = d.getDate();
-                var bulan = d.getMonth()+1;
-                var tahun = d.getFullYear();
-                $('#inputTanggal').val(tanggal.toString()+' - '+bulan.toString()+' - '+tahun);
-                $(document).on('click', '#dokter', function (e){
-                    document.getElementById("inputDokter").value = $(this).attr('data-id')+ ' - '+$(this).attr('data-nama');
-                    $('#modalDokter').modal('hide');
-                });
-                $(document).on('click', '#pasien', function (e){
-                    document.getElementById("inputPasien").value = $(this).attr('data-id')+ ' - '+$(this).attr('data-nama');
-                    $('#modalPasien').modal('hide');
-                });
-                $(document).on('click', '#layanan', function (e){
-                    document.getElementById("inputLayanan").value = $(this).attr('data-id')+ ' - '+$(this).attr('data-nama');
-                    $('#modalLayanan').modal('hide');
-                });
-            });
-        </script>
+        <script src="<?= base_url('assets/js/viewController/inputPemeriksaan.js') ?>"></script>
     </body>
 </html>

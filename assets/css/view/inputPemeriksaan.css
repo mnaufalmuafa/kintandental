@@ -3,54 +3,37 @@ h3 {
     color: #38260E;
 }
 
-ul.breadcrumb-custom {
-    list-style: none;
-    padding-left: 25px;
-    margin-top: 20px;
-}
-
-/* Display list items side by side */
-ul.breadcrumb-custom li {
-    display: inline;
-    font-size: 15px;
-    font-weight: lighter;
-}
-
-ul.breadcrumb-custom li.active {
-    font-weight: normal;
-    color: black;
-}
-
-/* Add a slash symbol (/) before/behind each list item */
-ul.breadcrumb-custom li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
-}
-
-/* Add a color to all links inside the list */
-ul.breadcrumb-custom li a {
-    color: black;
-    text-decoration: none;
-}
-
-/* Add a color on mouse-over */
-ul.breadcrumb-custom li a:hover {
-    color: black;
-    text-decoration: none;
-}
-
 .container-custom {
     margin-top: 35px;
     margin-left: 25px;
     margin-right: 25px;
 }
 
-.btn-primer {
-	background-color: #A66C20;
-	color: white;
+footer {
+    background-color: #E1D9D9;
 }
 
-.btn-primer {
-    color: white !important;
+form.container-custom {
+    margin-bottom: 130px;
+}
+
+input.inputJam {
+    border-color: rgba(0,0,0,0);
+}
+
+.modal-header {
+    background-color: #DEB887 !important;
+}
+
+.modal-body, .modal-footer {
+    background: rgba(255,228,196,0.35) !important;
+}
+
+.inputJam {
+    background-color: rgba(0,0,0,0) !important;
+    border-color: #C0C0C0 !important;
+}
+
+button[type=submit] {
+    float: right;
 }

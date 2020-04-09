@@ -54,3 +54,15 @@ input, select, option {
 a {
     text-decoration: none;
 }
+
+footer {
+    background-color: #E1D9D9;
+}
+
+form.container-custom {
+    margin-bottom: 130px;
+}
+
+input.disabled {
+    background-color: rgb(220,220,220) !important;
+}
