@@ -9,26 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:300,400|Sahitya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/elemen/navbar.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/elemen/breadcrumb.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/view/tambahDokter.css') ?>">
-        <style>
-            
-            footer {
-                background-color: #E1D9D9;
-            }
-            
-            form.container-custom {
-                margin-bottom: 130px;
-            }
-            
-            select {
-                background-color: rgba(1,9,9,0) !important;
-                border: 1px solid #C0C0C0;
-            }
-            
-            select option {
-                background: rgba(255,228,196,0.35) !important;
-            }
-        </style>
     </head>
     <body>
         <nav>
@@ -128,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <button 
                     type="submit" 
                     name="btnTambahDokter"
-                    class="btn btn-primer mt-3">Tambah Dokter</button>
+                    class="btn btn-primer mt-3 mb-5">Tambah Dokter</button>
         </form>
         
         <footer class="footer-copyright text-center py-3 mt-5 fixed-bottom">
