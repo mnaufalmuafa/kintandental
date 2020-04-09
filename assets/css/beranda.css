@@ -51,6 +51,26 @@ footer {
     background-color: #E1D9D9;
 }
 
+select, input, tr {
+    background-color: rgba(255,228,196,0) !important;
+}
+
+option {
+    background-color: rgba(255,228,196,0.35);
+}
+
+input {
+    border : 1px solid #C0C0C0;
+}
+
+table {
+    z-index: 1;
+}
+
+.FAB {
+    z-index: 2;
+}
+
 @media screen and (max-width: 680px) {
     .container_satu {
         padding-left: 25px;

@@ -12,27 +12,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/carousel.css') ?>">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
-        <style>
-            select, input, tr {
-                background-color: rgba(255,228,196,0) !important;
-            }
-            
-            option {
-                background-color: rgba(255,228,196,0.35);
-            }
-            
-            input {
-                border : 1px solid #C0C0C0;
-            }
-            
-            table {
-                z-index: 1;
-            }
-            
-            .FAB {
-                z-index: 2;
-            }
-        </style>
     </head>
     <body>
         <nav>
@@ -175,13 +154,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/controller/Navbar.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
-        <script>
-            $(document).ready(function(){
-                $('#tabel').DataTable();
-                $('#btnInputPemeriksaan').on('click',function(){
-                    $(location).attr('href','http://localhost/kintandental/index.php/beranda/inputPemeriksaan');
-                });
-            });
-        </script>
+        <script src="<?= base_url('assets/js/viewController/beranda.js') ?>"></script>
     </body>
 </html>

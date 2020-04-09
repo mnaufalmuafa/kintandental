@@ -10,7 +10,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/dokter.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
-        
         <style>
             .FAB {
                 position: fixed;
