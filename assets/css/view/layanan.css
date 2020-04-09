@@ -5,15 +5,6 @@
     width: 100% !important;
 }
 
-.btn-primer {
-	background-color: #A66C20;
-	color: white;
-}
-
-.btn-primer {
-    color: white !important;
-}
-
 .ic-aksi {
     width: 20x !important;
     height: 20px !important;
@@ -21,27 +12,6 @@
 
 .ic-aksi:hover {
     cursor: pointer;
-}
-
-.FAB {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    text-decoration: none;
-    background-color: #A66C20;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 50%;
-    font-size: 25px;
-    width: 50px;
-    height: 50px;
-    z-index: 2;
-}
-
-.FAB:hover {
-    background-color: #c78834;
-    color: white;
-    text-decoration: none;
 }
 
 .page-footer {

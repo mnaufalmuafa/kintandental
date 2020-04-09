@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/view/pasien.css') ?>">
         <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/css/elemen/fab.css') ?>">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
     </head>
     <body>
