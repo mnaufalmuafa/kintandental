@@ -38,6 +38,10 @@ input {
     border : 1px solid #C0C0C0;
 }
 
+.modal-body button {
+    float: right;
+}
+
 @media screen and (max-width: 680px) {
     .container-satu {
         padding-left: 25px !important;
