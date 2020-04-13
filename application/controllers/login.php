@@ -25,6 +25,7 @@ class login extends CI_Controller {
             );
             $login = $this->loginModel->login($data);
             if ($login) {
+                $this->session->set_userdata('username', $data['username']);
                 $this->intentToBeranda();
             }
             else {
@@ -36,10 +37,6 @@ class login extends CI_Controller {
     
     public function intentToBeranda() {
         redirect('beranda/index');
-    }
-    
-    public function logout() {
-        redirect('login/index');
     }
 }
 
