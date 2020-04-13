@@ -10,6 +10,10 @@ class pemeriksaanModel extends CI_Model {
         return $this->db->get('pemeriksaan')->num_rows();
     }
     
+    private function getWaktu($jam,$menit) {
+        return $jam." : ".$menit;
+    }
+    
     function getPemeriksaan() {
         $n = $this->getBanyakPemeriksaan();
         $arrDokter = $this->db->query('SELECT `nama` FROM `pemeriksaan` JOIN `dokter` ON (`pemeriksaan`.`idDokter` = `dokter`.`id`) JOIN `orang` ON (`dokter`.`id` = `orang`.`nik`)')->result_array();
@@ -18,7 +22,16 @@ class pemeriksaanModel extends CI_Model {
         $arrHasil = array();
         $i=0;
         foreach ($arrPemeriksaan as $pemeriksaan){
-            $subArr = array($arrDokter[$i],$arrPasien[$i],$pemeriksaan['tanggal'],$pemeriksaan['jam'],$pemeriksaan['nama'], $pemeriksaan['tarif']);
+            $tarif = "Rp. ".number_format($pemeriksaan['tarif'],0,",",".");
+            $subArr = array(
+                $i+1,
+                $arrDokter[$i]['nama'], 
+                $arrPasien[$i]['nama'], 
+                $pemeriksaan['tanggal'], 
+                $this->getWaktu($pemeriksaan['jam'],$pemeriksaan['menit']),
+                $pemeriksaan['nama'], 
+                $tarif
+            );
             $i = $i + 1;
             array_push($arrHasil,$subArr);
         }

@@ -100,30 +100,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </a>
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px;">
-            <table class="table table-bordered p-relative" id="tabel">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Dokter</th>
-                        <th>Pasien</th>
-                        <th>Tanggal</th>
-                        <th>Jam</th>
-                        <th>Layanan</th>
-                        <th>Tarif</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>Duta Dutaa</td>
-                        <td>23 September 2020</td>
-                        <td>12:12</td>
-                        <td>Pembersihan Karang Gigi</td>
-                        <td>500.000</td>
-                    </tr>
-                </tbody>
-            </table>
+            <?php //membuat tabel
+                $tableTemplate = array(
+                    'table_open' => '<table class="table table-bordered p-relative" id="tabel">',
+                    'thead_open' => '<thead>'
+                );
+                $this->table->set_template($tableTemplate);
+                $this->table->set_heading('No','Dokter','Pasien','tanggal','Jam','Layanan','Tarif');
+                foreach($dataPemeriksaan as $dp) {
+                    $this->table->add_row(
+                        $dp[0],
+                        $dp[1],
+                        $dp[2],
+                        $dp[3],
+                        $dp[4],
+                        $dp[5],
+                        $dp[6]
+                    );
+                }
+                echo $this->table->generate();
+            ?>
         </div>
         
         <footer class="footer-copyright text-center py-3 mt-5 p-fixed">
