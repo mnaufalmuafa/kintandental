@@ -2,9 +2,25 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class beranda extends CI_Controller {
+    
+    function __construct() {
+        parent::__construct();
+        $this->load->model('loginModel');
+        $this->load->model('pemeriksaanModel');
+        $this->load->model('dokterModel');
+        $this->load->model('pasienModel');
+        $this->load->model('layananModel');
+    }
+    
     public function index() {
         if ($this->session->has_userdata('username')) {
-            $this->load->view('beranda');
+            $data = array(
+                'nPemeriksaan' => $this->pemeriksaanModel->getBanyakPemeriksaan(),
+                'nDokter' => $this->dokterModel->getBanyakDokter(),
+                'nPasien' => $this->pasienModel->getBanyakPasien(),
+                'nLayanan' => $this->layananModel->getBanyakLayanan()
+            );
+            $this->load->view('beranda',$data);
         }
         else {
             redirect('login');

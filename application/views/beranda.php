@@ -58,25 +58,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="carousel-item active">
                     <img class="d-block w-100 bg" src="<?= base_url('assets/img/bg_carousel.png') ?>" alt="First slide">
                     <img class="icon" src="<?= base_url('assets/icon/ic_pemeriksaan.png') ?>">
-                    <h1 class="indikatorBanyak">0</h1>
+                    <h1 class="indikatorBanyak"><?= $nPemeriksaan ?></h1>
                     <h1 class="item-carousel-ket">Pemeriksaan</h1>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100 bg" src="<?= base_url('assets/img/bg_carousel.png') ?>" alt="Second slide">
                     <img class="icon" src="<?= base_url('assets/icon/ic_dokter.png') ?>">
-                    <h1 class="indikatorBanyak">0</h1>
+                    <h1 class="indikatorBanyak"><?= $nDokter ?></h1>
                     <h1 class="item-carousel-ket">Dokter Gigi</h1>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100 bg" src="<?= base_url('assets/img/bg_carousel.png') ?>" alt="Third slide">
                     <img class="icon" src="<?= base_url('assets/icon/ic_pasien.png') ?>">
-                    <h1 class="indikatorBanyak">0</h1>
+                    <h1 class="indikatorBanyak"><?= $nPasien ?></h1>
                     <h1 class="item-carousel-ket">Pasien</h1>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100 bg" src="<?= base_url('assets/img/bg_carousel.png') ?>" alt="Third slide">
                     <img class="icon" src="<?= base_url('assets/icon/ic_layanan.png') ?>">
-                    <h1 class="indikatorBanyak">0</h1>
+                    <h1 class="indikatorBanyak"><?= $nLayanan ?></h1>
                     <h1 class="item-carousel-ket">Layanan</h1>
                 </div>
             </div>
