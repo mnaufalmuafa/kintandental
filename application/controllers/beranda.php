@@ -18,7 +18,8 @@ class beranda extends CI_Controller {
                 'nPemeriksaan' => $this->pemeriksaanModel->getBanyakPemeriksaan(),
                 'nDokter' => $this->dokterModel->getBanyakDokter(),
                 'nPasien' => $this->pasienModel->getBanyakPasien(),
-                'nLayanan' => $this->layananModel->getBanyakLayanan()
+                'nLayanan' => $this->layananModel->getBanyakLayanan(),
+                'dataPemeriksaan' => $this->pemeriksaanModel->getPemeriksaan()
             );
             $this->load->view('beranda',$data);
         }
