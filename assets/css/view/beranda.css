@@ -12,6 +12,7 @@
 table {
     margin-top: 30px;
     overflow-x: auto;
+    margin-bottom: 300px;
 }
 
 table thead tr th {
@@ -41,6 +42,11 @@ table {
 .FAB {
     z-index: 2;
 }
+
+.page-footer {
+    z-index: 1;
+}
+
 
 @media screen and (max-width: 680px) {
     .container_satu {

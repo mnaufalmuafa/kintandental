@@ -122,29 +122,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td>Pembersihan Karang Gigi</td>
                         <td>500.000</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>Duta Dutaa</td>
-                        <td>24 September 2020</td>
-                        <td>12:12</td>
-                        <td>Pembersihan Karang Gigi</td>
-                        <td>500.000</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>Duta Dutaa</td>
-                        <td>25 September 2020</td>
-                        <td>12:12</td>
-                        <td>Pembersihan Karang Gigi</td>
-                        <td>500.000</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
         
-        <footer class="footer-copyright text-center py-3 mt-5">
+        <footer class="footer-copyright text-center py-3 mt-5 p-fixed">
             © 2020 Kintan Dental • All rights reserved • Love from Tegal
         </footer>
         
