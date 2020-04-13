@@ -23,11 +23,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <form class="form" method="post">
                         <h3 class="text-center">Login</h3>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username" required>
+                            <input type="text" name="username" class="form-control" placeholder="Username" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password" required>
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
                         </div>
+                        <?php
+                            if (isset($error_msg)) {
+                                echo "<small>".$error_msg."</small>";
+                            }
+                        ?>
                         <button class="btn btn-login w-100" type="submit" name="btnLogin">Login</button>
                     </form>
                 </div>
