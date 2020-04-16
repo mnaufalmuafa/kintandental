@@ -61,41 +61,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px; margin-bottom: 70px;">
-<!--
-            <table class="table table-bordered" id="tabel">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>NIK</th>
-                        <th>Nama</th>
-                        <th>Alamat</th>
-                        <th>No Telp</th>
-                        <th>Pekerjaan</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>3328112306000007</td>
-                        <td>Duta Dutaa</td>
-                        <td>Bumijawa</td>
-                        <td>082321345764</td>
-                        <td>Peternak</td>
-                        <td>
-                            <img 
-                                 class="ic-aksi ic-aksi-edit" 
-                                 src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                 data-tippy-content="Edit Pasien"
-                                 data-id="1">
-                            <img 
-                                 class="ic-aksi" 
-                                 src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                 data-tippy-content="Hapus Pasien">
-                        </td>
-                    </tr>
-            </table>    
--->
             <?php //membuat tabel
                 $tableTemplate = array(
                     'table_open' => '<table class="table table-bordered" id="tabel">',
