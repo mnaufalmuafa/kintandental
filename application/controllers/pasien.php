@@ -2,8 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class pasien extends CI_Controller {
+    
+    function __construct() {
+        parent::__construct();
+        $this->load->model('pasienModel');
+    }
+    
     public function index() {
-        $this->load->view('pasien/pasien');
+        if ($this->session->has_userdata('username')) {
+            $data['ListPasien'] = $this->pasienModel->getListPasien();
+            $this->load->view('pasien/pasien',$data);
+        }
+        else {
+            redirect('login');
+        }
     }
     
     public function tambahPasien() {

@@ -61,6 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px; margin-bottom: 70px;">
+<!--
             <table class="table table-bordered" id="tabel">
                 <thead>
                     <tr>
@@ -93,26 +94,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                  data-tippy-content="Hapus Pasien">
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>3328112306000007</td>
-                        <td>Duta Dutaa</td>
-                        <td>Bumijawa</td>
-                        <td>082321345764</td>
-                        <td>Peternak</td>
-                        <td>
+            </table>    
+-->
+            <?php //membuat tabel
+                $tableTemplate = array(
+                    'table_open' => '<table class="table table-bordered" id="tabel">',
+                    'thead_open' => '<thead>'
+                );
+                $this->table->set_template($tableTemplate);
+                $this->table->set_heading('No','NIK','Nama','Alamat','No Telp','Pekerjaan','Aksi');
+                $i = 0;
+                $ic_edit_account_loc = base_url('assets/icon/ic_edit_account.png');
+                $ic_delete_account_loc = base_url('assets/icon/ic_delete_account.png');
+                foreach($ListPasien as $pasien) {
+                    $i = $i + 1;
+                    $this->table->add_row(
+                        $pasien[0],
+                        $pasien[1],
+                        $pasien[2],
+                        $pasien[3],
+                        $pasien[4],
+                        $pasien[5],
+                        '
                             <img 
-                                 class="ic-aksi ic-aksi-edit" 
-                                 src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
+                                 class="ic-aksi ic-aksi-edit"
+                                 src="'.$ic_edit_account_loc.'"
                                  data-tippy-content="Edit Pasien"
-                                 data-id="2">
+                                 data-id="'.$pasien[1].'">
                             <img 
                                  class="ic-aksi" 
-                                 src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                 data-tippy-content="Hapus Pasien">
-                        </td>
-                    </tr>
-            </table>    
+                                 src="'.$ic_delete_account_loc.'"
+                                 data-tippy-content="Hapus Pasien"
+                                 data-id="'.$pasien[1].'">
+                        '
+                    );
+                }
+                echo $this->table->generate();
+            ?>
         </div>
         
         <a href="http://localhost/kintandental/index.php/pasien/tambahPasien" class="FAB p" id="FAB">
