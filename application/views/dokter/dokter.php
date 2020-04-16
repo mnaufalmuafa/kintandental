@@ -61,59 +61,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px; margin-bottom: 70px;">
-            <table class="table table-bordered" id="tabel">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>NIK</th>
-                        <th>Nama</th>
-                        <th>STR</th>
-                        <th>Shift</th>
-                        <th>Gaji</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
+            <?php //membuat tabel
+                $tableTemplate = array(
+                    'table_open' => '<table class="table table-bordered" id="tabel">',
+                    'thead_open' => '<thead>'
+                );
+                $this->table->set_template($tableTemplate);
+                $this->table->set_heading('No','NIK','Nama','STR','Shift','Gaji','Aksi');
+                $i = 0;
+                $ic_edit_account_loc = base_url('assets/icon/ic_edit_account.png');
+                $ic_delete_account_loc = base_url('assets/icon/ic_delete_account.png');
+                foreach($ListDokter as $dokter) {
+                    $i = $i + 1;
+                    $this->table->add_row(
+                        $dokter[0],
+                        $dokter[1],
+                        $dokter[2],
+                        $dokter[3],
+                        $dokter[4],
+                        $dokter[5],
+                        '
                             <img 
                                  class="ic-aksi ic-aksi-edit"
-                                 src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
+                                 src="'.$ic_edit_account_loc.'"
                                  data-tippy-content="Edit Dokter"
-                                 data-id="1">
+                                 data-id="'.$dokter[1].'">
                             <img 
                                  class="ic-aksi" 
-                                 src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                 data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>3328112306000007</td>
-                        <td>Drg. Kintan Rahma</td>
-                        <td>12345</td>
-                        <td>Malam</td>
-                        <td>2.300.000</td>
-                        <td>
-                            <img 
-                                 class="ic-aksi ic-aksi-edit"
-                                 src="<?= base_url('assets/icon/ic_edit_account.png') ?>"
-                                 data-tippy-content="Edit Dokter"
-                                 data-id="2">
-                            <img 
-                                 class="ic-aksi" 
-                                 src="<?= base_url('assets/icon/ic_delete_account.png') ?>"
-                                 data-tippy-content="Hapus Dokter">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>    
+                                 src="'.$ic_delete_account_loc.'"
+                                 data-tippy-content="Hapus Dokter"
+                                 data-id="'.$dokter[1].'">
+                        '
+                    );
+                }
+                echo $this->table->generate();
+            ?>
         </div>
         
         <a href="http://localhost/kintandental/index.php/dokter/tambahDokter" class="FAB" id="FAB">
