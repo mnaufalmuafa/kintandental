@@ -136,7 +136,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
         
-        <a href="#" class="FAB p" id="FAB">
+        <a href="#" class="FAB p" id="FAB" data-toggle="modal" data-target="#ModalInputLayanan">
             +
         </a>
         
