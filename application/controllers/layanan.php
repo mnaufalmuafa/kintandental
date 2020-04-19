@@ -17,6 +17,22 @@ class layanan extends CI_Controller {
             redirect('login');
         }
     }
+    
+    public function addLayanan() {
+        echo $this->input->post('nama');
+        echo $this->input->post('tarif');
+        $data1 = array(
+            "nama" => $this->input->post('nama'),
+            "tarif" => $this->input->post('tarif')
+        );
+        $data = $this->db->insert('layanan',$data1);
+        echo json_encode($data);
+    }
+    
+    public function getDataLayanan() {
+        $query = $this->db->get('layanan')->result_array();
+        echo json_encode($query);
+    }
 }
 
 ?>

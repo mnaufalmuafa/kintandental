@@ -71,14 +71,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="" method="post" id="addLayanan">
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">Nama Layanan</label>
-                                <input type="text" class="form-control input-nama" id="inputNama">
+                                <input type="text" class="form-control input-nama" name="nama" id="inputNamaI">
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">Tarif</label>
-                                <input type="number" class="form-control input-tarif" id="inputTarif">
+                                <input type="number" class="form-control input-tarif" name="tarif" id="inputTarifI">
                             </div>
                              <button type="submit" class="btn btn-primer">Tambah Layanan</button>
                         </form>
@@ -89,40 +89,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px; margin-bottom: 70px;">
             <?php //membuat tabel
-                $tableTemplate = array(
-                    'table_open' => '<table class="table table-bordered" id="tabel">',
-                    'thead_open' => '<thead>'
-                );
-                $this->table->set_template($tableTemplate);
-                $this->table->set_heading('No','ID','Nama Layanan','Tarif','Aksi');
-                $i = 0;
-                $ic_edit_loc = base_url('assets/icon/ic_edit.png');
-                $ic_garbage_can_loc = base_url('assets/icon/ic_trash.png');
-                foreach($ListLayanan as $layanan) {
-                    $i = $i + 1;
-                    $this->table->add_row(
-                        $layanan[0],
-                        $layanan[1],
-                        $layanan[2],
-                        $layanan[3],
-                        '
-                            <img 
-                                 class="ic-aksi" 
-                                 src="'.$ic_edit_loc.'"
-                                 data-tippy-content="Edit Layanan"
-                                 data-toggle="modal" data-target="#ModalEditLayanan"
-                                 data-id="'.$layanan[1].'"
-                                 data-nama= "'.$layanan[2].'"
-                                 data-tarif="'.$layanan[3].'">
-                            <img 
-                                 class="ic-aksi" 
-                                 src="'.$ic_garbage_can_loc.'"
-                                 data-tippy-content="Hapus Layanan"">
-                        '
-                    );
-                }
-                echo $this->table->generate();
+//                $tableTemplate = array(
+//                    'table_open' => '<table class="table table-bordered" id="tabel">',
+//                    'thead_open' => '<thead>'
+//                );
+//                $this->table->set_template($tableTemplate);
+//                $this->table->set_heading('No','ID','Nama Layanan','Tarif','Aksi');
+//                $i = 0;
+//                $ic_edit_loc = base_url('assets/icon/ic_edit.png');
+//                $ic_garbage_can_loc = base_url('assets/icon/ic_trash.png');
+//                foreach($ListLayanan as $layanan) {
+//                    $i = $i + 1;
+//                    $this->table->add_row(
+//                        $layanan[0],
+//                        $layanan[1],
+//                        $layanan[2],
+//                        $layanan[3],
+//                        '
+//                            <img 
+//                                 class="ic-aksi" 
+//                                 src="'.$ic_edit_loc.'"
+//                                 data-tippy-content="Edit Layanan"
+//                                 data-toggle="modal" data-target="#ModalEditLayanan"
+//                                 data-id="'.$layanan[1].'"
+//                                 data-nama= "'.$layanan[2].'"
+//                                 data-tarif="'.$layanan[3].'">
+//                            <img 
+//                                 class="ic-aksi" 
+//                                 src="'.$ic_garbage_can_loc.'"
+//                                 data-tippy-content="Hapus Layanan"">
+//                        '
+//                    );
+//                }
+//                echo $this->table->generate();
             ?>
+            <table class="table table-bordered" id="tabel">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Id</th>
+                        <th>Nama Layanan</th>
+                        <th>Tarif</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+<!--                    -->
+                </tbody>
+            </table>
         </div>
         
         <div 
@@ -177,5 +191,91 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/tooltipIcAksi.js') ?>"></script>
         <script src="<?= base_url('assets/js/viewController/layanan.js') ?>"></script>
+        <script>
+            $('#ModalEditLayanan').on('show.bs.modal',function(event) {
+                var button = $(event.relatedTarget);
+                var id = button.data('id');
+                var nama = button.data('nama');
+                var tarif = button.data('tarif');
+
+                var modal = $(this);
+                modal.find('#inputId').val(id);
+                modal.find('#inputNama').val(nama);
+                modal.find('#inputTarif').val(tarif);
+            });
+            
+            function getData() {
+                var header = '<table class="table table-bordered" id="tabel">';
+                var thead = '<thead><tr>';
+                var heading = '<th>No</th><th>Id</th><th>Nama Layanan</th><th>Tarif</th><th>Edit</th><th>Hapus</th>';
+                var closeThead = '</tr></thead>';
+                var closeTable = '</table>';
+                $.ajax({
+                    type : 'POST',
+                    url : 'layanan/getDataLayanan',
+                    dataType : 'JSON',
+                    success : function(data) {
+                        //alert('gagal');
+                        var baris = '';
+                        
+                        for (let i = 0; i < data.length; i++){
+                            baris += "<tr>" +
+                                "<td>"+(i+1)+"</td>"+
+                                "<td>"+data[i].id+"</td>"+
+                                "<td>"+data[i].nama+"</td>"+
+                                "<td>"+data[i].tarif+"</td>"+
+                                "<td>"+
+                                "<img class=\"ic-aksi aksi-edit\" src=\"<?= base_url('assets/icon/ic_edit.png') ?>\" data-tippy-content=\"Edit Layanan\" data-toggle=\"modal\" data-target=\"#ModalEditLayanan\" data-id= "+
+                                '"'+data[i].id+'"'+
+                                "data-nama = "+
+                                '"'+data[i].nama+'"'+
+                                "data-tarif = "+
+                                '"'+data[i].tarif+'"'+
+                                ">"+
+                                "<img class=\"ic-aksi aksi-hapus\" src=\"<?= base_url('assets/icon/ic_trash.png') ?>\">"+
+                                "</td>"+
+                                "</tr>";
+                        }
+                        $('#tbody').html(baris);
+                        tippy('.aksi-edit',{
+                            content : "Edit Layanan",
+                            placement : 'bottom'
+                        });
+                        tippy('.aksi-hapus',{
+                            content : "Hapus Layanan",
+                            placement : 'bottom'
+                        });
+                    }
+                });
+            }
+            
+            $(document).ready(function(){
+                getData();
+                $('.ic-aksi').attr('data-tippy-content','ini');
+            });
+            
+            $('#addLayanan').submit(function(e){
+                e.preventDefault();
+                $('#ModalInputLayanan').modal('hide');
+                var nama = $('#inputNamaI').val();
+                var tarif = $('#inputTarifI').val();
+                var dataForm = $(this);
+                $.ajax({
+                    url : 'layanan/addLayanan',
+                    type : 'POST',
+                    data: dataForm.serialize(),
+                    dataType : 'JSON',
+                    error: function(data) {
+                        getData();
+                        $('#addLayanan').trigger("reset");
+                    },
+                    success : function(data) {
+                        getData();
+                        alert('sukses');
+                        $('#addLayanan').trigger("reset");
+                    } 
+                });
+            });
+        </script>
     </body>
 </html>
