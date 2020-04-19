@@ -42,6 +42,10 @@ input {
     float: right;
 }
 
+#inputId {
+    background-color: rgb(220,220,220) !important;
+}
+
 @media screen and (max-width: 680px) {
     .container-satu {
         padding-left: 25px !important;
