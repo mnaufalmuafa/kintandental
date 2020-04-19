@@ -88,41 +88,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         
         <div class="tabel" style="overflow-x: auto; margin-top: 20px; margin-bottom: 70px;">
-            <?php //membuat tabel
-//                $tableTemplate = array(
-//                    'table_open' => '<table class="table table-bordered" id="tabel">',
-//                    'thead_open' => '<thead>'
-//                );
-//                $this->table->set_template($tableTemplate);
-//                $this->table->set_heading('No','ID','Nama Layanan','Tarif','Aksi');
-//                $i = 0;
-//                $ic_edit_loc = base_url('assets/icon/ic_edit.png');
-//                $ic_garbage_can_loc = base_url('assets/icon/ic_trash.png');
-//                foreach($ListLayanan as $layanan) {
-//                    $i = $i + 1;
-//                    $this->table->add_row(
-//                        $layanan[0],
-//                        $layanan[1],
-//                        $layanan[2],
-//                        $layanan[3],
-//                        '
-//                            <img 
-//                                 class="ic-aksi" 
-//                                 src="'.$ic_edit_loc.'"
-//                                 data-tippy-content="Edit Layanan"
-//                                 data-toggle="modal" data-target="#ModalEditLayanan"
-//                                 data-id="'.$layanan[1].'"
-//                                 data-nama= "'.$layanan[2].'"
-//                                 data-tarif="'.$layanan[3].'">
-//                            <img 
-//                                 class="ic-aksi" 
-//                                 src="'.$ic_garbage_can_loc.'"
-//                                 data-tippy-content="Hapus Layanan"">
-//                        '
-//                    );
-//                }
-//                echo $this->table->generate();
-            ?>
             <table class="table table-bordered" id="tabel">
                 <thead>
                     <tr>
@@ -215,9 +180,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     url : 'layanan/getDataLayanan',
                     dataType : 'JSON',
                     success : function(data) {
-                        //alert('gagal');
                         var baris = '';
-                        
                         for (let i = 0; i < data.length; i++){
                             baris += "<tr>" +
                                 "<td>"+(i+1)+"</td>"+
@@ -232,7 +195,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 "data-tarif = "+
                                 '"'+data[i].tarif+'"'+
                                 ">"+
-                                "<img class=\"ic-aksi aksi-hapus\" src=\"<?= base_url('assets/icon/ic_trash.png') ?>\">"+
+                                "<img class=\"ic-aksi aksi-hapus\" src=\"<?= base_url('assets/icon/ic_trash.png') ?>\""+
+                                "data-id = "+ "\"" + data[i].id + "\" " +
+                                "data-nama = "+ "\"" + data[i].nama + "\"" +
+                                ">"+
                                 "</td>"+
                                 "</tr>";
                         }
@@ -245,13 +211,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             content : "Hapus Layanan",
                             placement : 'bottom'
                         });
+                        
+                        $('.aksi-hapus').click(function(){
+                            var id = $(this).attr('data-id');
+                            var confirm_ = confirm('Apakah anda yakin ingin menghapus '+$(this).attr('data-nama'));
+                            if (confirm_) {
+                                var id = $(this).attr('data-id');
+                                $.ajax({
+                                    type : 'POST',
+                                    url : 'layanan/hapus',
+                                    data : {
+                                        id : id
+                                    },
+                                    dataType : 'JSON',
+                                    success : function() {
+                                        console.log('sukses');
+                                        getData();
+                                    },
+                                    error : function() {
+                                        console.log('gagal');
+                                        getData();
+                                    }
+                                });
+                            }
+                            else {
+                                console.log('tidak hapus');
+                            }
+                        });
+            
                     }
                 });
             }
             
             $(document).ready(function(){
                 getData();
-                $('.ic-aksi').attr('data-tippy-content','ini');
             });
             
             $('#addLayanan').submit(function(e){

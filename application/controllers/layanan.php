@@ -33,6 +33,13 @@ class layanan extends CI_Controller {
         $query = $this->db->get('layanan')->result_array();
         echo json_encode($query);
     }
+    
+    public function hapus() {
+        $id = $this->input->post('id');
+        $data = $this->layananModel->deleteFromPemeriksaan($id);
+        $data = $this->layananModel->deleteLayanan($id);
+        echo json_encode($data);
+    }
 }
 
 ?>
