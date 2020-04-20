@@ -116,18 +116,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="" method="post" id="editLayanan">
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label" >Id</label>
-                                <input type="text" class="form-control input-nama" id="inputId" disabled>
+                                <input type="text" class="form-control input-nama" name="id" id="inputId" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">Nama Layanan</label>
-                                <input type="text" class="form-control" id="inputNama">
+                                <input type="text" class="form-control" name="nama" id="inputNama">
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">Tarif</label>
-                                <input type="number" class="form-control" id="inputTarif">
+                                <input type="number" class="form-control" name="tarif" id="inputTarif">
                             </div>
                              <button type="submit" class="btn btn-primer">Edit Layanan</button>
                         </form>
@@ -266,6 +266,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         getData();
                         alert('sukses');
                         $('#addLayanan').trigger("reset");
+                    } 
+                });
+            });
+            
+            $('#editLayanan').submit(function(e){
+                e.preventDefault();
+                $('#ModalEditLayanan').modal('hide');
+                var id = $('#inputId').val();
+                var nama = $('#inputNama').val();
+                var tarif = $('#inputTarif').val();
+                var dataForm = $(this);
+                console.log('ss');
+                $.ajax({
+                    url : 'layanan/editLayanan',
+                    type : 'POST',
+                    data: {
+                        id : id,
+                        nama : nama,
+                        tarif : tarif
+                    },
+                    dataType : 'JSON',
+                    error: function(request) {
+                        getData();
+                        alert(request.responseText);
+                    },
+                    success : function(data) {
+                        getData();
                     } 
                 });
             });

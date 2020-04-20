@@ -40,6 +40,16 @@ class layanan extends CI_Controller {
         $data = $this->layananModel->deleteLayanan($id);
         echo json_encode($data);
     }
+    
+    public function editLayanan() {
+        $id = $this->input->post('id');
+        $data = array (
+            "nama" => $this->input->post('nama'),
+            "tarif" => $this->input->post('tarif')
+        );
+        $data2 = $this->layananModel->editLayanan($id,$data);
+        echo json_encode($data2);
+    }
 }
 
 ?>

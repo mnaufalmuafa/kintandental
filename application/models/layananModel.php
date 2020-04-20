@@ -31,9 +31,9 @@ class layananModel extends CI_Model {
         $this->db->insert('layanan',$data);
     }
     
-    public function editLayanan($data) {
-        $this->db->where('id',$data['id']);
-        $this->db->update('layanan',$data);
+    public function editLayanan($id,$data) {
+        $this->db->where('id',$id);
+        return $this->db->update('layanan',$data);
     }
     
     public function deleteLayanan($id) {
