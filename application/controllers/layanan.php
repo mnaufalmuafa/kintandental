@@ -30,7 +30,7 @@ class layanan extends CI_Controller {
     }
     
     public function getDataLayanan() {
-        $query = $this->db->get('layanan')->result_array();
+        $query = $this->layananModel->getDataLayanan();
         echo json_encode($query);
     }
     
