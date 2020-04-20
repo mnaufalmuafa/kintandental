@@ -27,6 +27,10 @@ class layananModel extends CI_Model {
         return $arrHasil;
     }
     
+    public function getDataLayanan() {
+        return $this->db->get('layanan')->result_array();
+    }
+    
     public function addLayanan($data) {
         $this->db->insert('layanan',$data);
     }
