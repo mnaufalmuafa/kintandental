@@ -25,7 +25,7 @@ class layanan extends CI_Controller {
             "nama" => $this->input->post('nama'),
             "tarif" => $this->input->post('tarif')
         );
-        $data = $this->db->insert('layanan',$data1);
+        $data = $this->layananModel->addLayanan($data1);
         echo json_encode($data);
     }
     
