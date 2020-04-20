@@ -10,8 +10,7 @@ class layanan extends CI_Controller {
     
     public function index() {
         if ($this->session->has_userdata('username')) {
-            $data['ListLayanan'] = $this->layananModel->getListLayanan();
-            $this->load->view('layanan/layanan',$data);
+            $this->load->view('layanan/layanan');
         }
         else {
             redirect('login');
