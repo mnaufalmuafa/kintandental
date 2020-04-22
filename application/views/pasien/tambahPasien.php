@@ -63,12 +63,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <label for="nik" class="col-sm-2 col-form-label">NIK</label>
                 <div class="col-sm-10">
                     <input 
-                           type="number" 
+                           type="tel" 
                            name="nik" 
                            class="form-control" 
                            id="inputNIK" 
                            placeholder="NIK" 
-                           max="9999999999999999"
+                           pattern="[0-9]{16}"
                            required>
                 </div>
             </div>
@@ -105,15 +105,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <input type="text" name="pekerjaan" class="form-control" id="inputPekerjaan" placeholder="Pekerjaan" value = "<?php if (isset($pekerjaan)){ echo $pekerjaan; }?>" required> 
                 </div>
             </div>
-            <?php
-                if (isset($error_msg)) {
-                    echo "<small>".$error_msg."</small>";
-                }
-            ?>
+            
             <button 
                     type="submit" 
                     name="btnTambahPasien"
-                    class="btn btn-primer mt-3 mb-5">Tambah Pasien</button>
+                    class="btn btn-primer mt-3 mb-5">Tambah Pasien
+            </button>
         </form>
         
         <footer class="footer-copyright text-center py-3 mt-5 fixed-bottom">
@@ -126,5 +123,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/controller/Navbar.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                <?php
+                    if (isset($error_msg)) {
+                        echo "alert(\"".$error_msg."\")";
+                    }
+                ?>
+            });
+        </script>
     </body>
 </html>
