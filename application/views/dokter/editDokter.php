@@ -101,9 +101,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <label for="shift" class="col-sm-2 col-form-label">Shift</label>
                 <div class="col-sm-2">
                     <select name="shift" class="form-control" id="inputShift" required>
-                        <option value="Pagi" selected>Pagi</option>
-                        <option value="Siang">Siang</option>
-                        <option value="Malam">Malam</option>
+                        <option value="Pagi"<?php if ($dokter["shift"]=='Pagi') {
+                            echo "selected";
+                        } ?>>Pagi</option>
+                        <option value="Siang"<?php if ($dokter["shift"]=='Siang') {
+                            echo "selected";
+                        } ?>>Siang</option>
+                        <option value="Malam"<?php if ($dokter["shift"]=='Malam') {
+                            echo "selected";
+                        } ?>>Malam</option>
                     </select>
                 </div>
             </div>
