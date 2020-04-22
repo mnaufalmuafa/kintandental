@@ -102,9 +102,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group row">
                 <label for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</label>
                 <div class="col-sm-10">
-                    <input type="text" name="pekerjaan" class="form-control" id="inputPekerjaan" placeholder="Pekerjaan" required>
+                    <input type="text" name="pekerjaan" class="form-control" id="inputPekerjaan" placeholder="Pekerjaan" value = "<?php if (isset($pekerjaan)){ echo $pekerjaan; }?>" required> 
                 </div>
             </div>
+            <?php
+                if (isset($error_msg)) {
+                    echo "<small>".$error_msg."</small>";
+                }
+            ?>
             <button 
                     type="submit" 
                     name="btnTambahPasien"
