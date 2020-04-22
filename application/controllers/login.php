@@ -8,16 +8,21 @@ class login extends CI_Controller {
     }
     
     public function index() {
-        $error = $this->session->flashdata('error');
-        if (isset($error)) {
-            $content = array(
-                'error_msg' => "username atau password salah, coba lagi"
-            );
-            $this->load->view('login',$content);
+        if (!$this->session->has_userdata('username')){
+            $error = $this->session->flashdata('error');
+            if (isset($error)) {
+                $content = array(
+                    'error_msg' => "username atau password salah, coba lagi"
+                );
+                $this->load->view('login',$content);
+            }
+            else {
+                $this->load->view('login');
+            }
+        } else {
+            redirect('beranda');
         }
-        else {
-            $this->load->view('login');
-        }
+
         if (isset($_POST['btnLogin'])) {
             $data = array(
                 'username' => $this->input->post('username'),
