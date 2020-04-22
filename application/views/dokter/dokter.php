@@ -90,7 +90,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                  class="ic-aksi ic-aksi-hapus" 
                                  src="'.$ic_delete_account_loc.'"
                                  data-tippy-content="Hapus Dokter"
-                                 data-id="'.$dokter[1].'">
+                                 data-id="'.$dokter[1].'"
+                                 data-Nama="'.$dokter[2].'">
                         '
                     );
                 }
