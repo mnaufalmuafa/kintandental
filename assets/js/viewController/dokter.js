@@ -8,4 +8,10 @@ $(document).ready(function(){
         var id = $(this).attr('data-id');
         $(location).attr('href',url+id);
     });
+
+    $('.ic-aksi-hapus').on('click',function(){
+        var url = 'http://localhost/kintandental/index.php/dokter/hapusDokter/';
+        var id = $(this).attr('data-id');
+        $(location).attr('href',url+id);
+    });
 });

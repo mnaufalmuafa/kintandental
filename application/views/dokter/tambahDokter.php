@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group row">
                 <label for="shift" class="col-sm-2 col-form-label">Shift</label>
                 <div class="col-sm-2">
-                    <select name="gaji" class="form-control" id="inputShift" required>
+                    <select name="shift" class="form-control" id="inputShift" required>
                         <option value="Pagi" selected>Pagi</option>
                         <option value="Siang">Siang</option>
                         <option value="Malam">Malam</option>
@@ -106,7 +106,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-10">
                     <input type="number" name="gaji" class="form-control" id="inputGaji" placeholder="Gaji" required>
                 </div>
+                <?php
+                    if (isset($error_msg)) {
+                        echo "<p class=\"error_msg\">".$error_msg."</p>";
+                    }
+                ?>
             </div>
+
             <button 
                     type="submit" 
                     name="btnTambahDokter"

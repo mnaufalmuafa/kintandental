@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            id="inputNIK" 
                            placeholder="NIK" 
                            max="9999999999999999"
-                           value="1234567890123456"
+                           value="<?= $dokter['id'] ?>"
                            required readonly disabled>
                 </div>
             </div>
@@ -78,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-10">
                     <input 
                            type="text" 
-                           value = "Duta Dutaa"
+                           value = "<?= $dokter['nama'] ?>"
                            name="nama" class="form-control disabled" id="inputNama" placeholder="Nama" 
                            required readonly disabled>
                 </div>
@@ -88,7 +88,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-10">
                     <input 
                            type="number" 
-                           name="str" 
+                           name="str"
+                           value = "<?= $dokter['str'] ?>" 
                            class="form-control" 
                            id="inputSTR" 
                            placeholder="STR"
@@ -99,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group row">
                 <label for="shift" class="col-sm-2 col-form-label">Shift</label>
                 <div class="col-sm-2">
-                    <select name="gaji" class="form-control" id="inputShift" required>
+                    <select name="shift" class="form-control" id="inputShift" required>
                         <option value="Pagi" selected>Pagi</option>
                         <option value="Siang">Siang</option>
                         <option value="Malam">Malam</option>
@@ -109,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group row mb-3">
                 <label for="gaji" class="col-sm-2 col-form-label">Gaji</label>
                 <div class="col-sm-10">
-                    <input type="number" name="gaji" class="form-control" id="inputGaji" placeholder="Gaji" required>
+                    <input type="number" name="gaji" class="form-control" id="inputGaji" placeholder="Gaji" required value="<?= $dokter['gaji'] ?>">
                 </div>
             </div>
             <button 

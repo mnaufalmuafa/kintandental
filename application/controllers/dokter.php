@@ -19,17 +19,58 @@ class dokter extends CI_Controller {
     }
     
     public function tambahDokter() {
-        $this->load->view('dokter/tambahDokter');
+        $error = $this->session->flashdata('error');
+        if(isset($error)) {
+            $data3['error_msg'] = 'NIK sudah terdaftar'; 
+             $this->load->view('dokter/tambahDokter', $data3);
+        } else {
+            $this->load->view('dokter/tambahDokter');
+        }
+
         if (isset($_POST['btnTambahDokter'])) {
-            redirect('dokter');
+            if ($this->dokterModel->isExistDokter($this->input->post('nik'))==0) {
+                $data1 = array(
+                    'id' => $this->input->post('nik'),
+                    'str' => $this->input->post('str'),
+                    'shift' => $this->input->post('shift'),
+                    'gaji' => $this->input->post('gaji')
+                );
+                $data2 = array(
+                        'nik' => $this->input->post('nik'),
+                        'nama' => $this->input->post('nama')
+                );
+
+                if ($this->dokterModel->isExistOrang($this->input->post('nik'))==0){
+                        $this->dokterModel->tambahOrang($data2);
+                }
+                $this->dokterModel->tambahDokter($data1);
+
+                redirect('dokter');
+            } else {
+                $this->session->set_flashdata('error', true);
+                redirect('dokter/tambahDokter');
+            }
         }
     }
     
     public function editDokter($id) {
-        $this->load->view('dokter/editDokter');
+        $data['dokter'] = $this->dokterModel->getDokter($id);
+        $this->load->view('dokter/editDokter', $data);
         if (isset($_POST['btnEditDokter'])){
+            $data1 = array(
+                'str' => $this->input->post('str'),
+                'shift' => $this->input->post('shift'),
+                'gaji' => $this->input->post('gaji')
+            );
+            $this->dokterModel->editDokter($id, $data1);
             redirect('dokter');
         }
+    }
+
+    public function hapusDokter($id) {
+        $this->dokterModel->hapusPemeriksaan($id);
+        $this->dokterModel->hapusDokter($id);
+        redirect('dokter');
     }
 }
 
