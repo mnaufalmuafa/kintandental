@@ -30,7 +30,7 @@ class dokterModel extends CI_Model {
     }
 
     public function getDokter($id) {
-        return $this->db->query("SELECT `id`,`str`,`shift`,`gaji`,`nama` FROM `dokter` JOIN `orang` ON (`dokter`.`id`=`orang`.`nik`)")->row_array();
+        return $this->db->query("SELECT `id`,`str`,`shift`,`gaji`,`nama` FROM `dokter` JOIN `orang` ON (`dokter`.`id`=`orang`.`nik`)WHERE `nik` = '".$id."'")->row_array();
     }
 
     public function editDokter($id,$data){

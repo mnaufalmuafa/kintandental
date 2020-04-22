@@ -19,7 +19,18 @@ class pasien extends CI_Controller {
     }
     
     public function tambahPasien() {
-        $this->load->view('pasien/tambahPasien');
+        $error = $this->session->flashdata('error');
+        if ($this->session->has_userdata('username')){
+            if(isset($error)) {
+                $data3['error_msg'] = 'NIK sudah terdaftar'; 
+                 $this->load->view('pasien/tambahPasien', $data3);
+            } else {
+                $this->load->view('pasien/tambahPasien');
+            }
+        } else {
+            redirect('login');
+        }    
+        
         if (isset($_POST['btnTambahPasien'])) {
             if ($this->pasienModel->isExistPasien($this->input->post('nik'))==0) {
                 $data1 = array(
@@ -47,16 +58,20 @@ class pasien extends CI_Controller {
                     'noTelp' => $this->input->post('noTelp'),
                     'error_msg' => 'NIK telah terdaftar',
                 );
-                $this->load->view('pasien/tambahPasien',$data1);
-                $session->setFlashdata('pekerjaan', $this->input->post('pekerjaan'));
-                $session->setFlashdata('pekerjaan', 'error_msg');
+                $this->session->set_flashdata('error', true);
+                redirect('pasien/tambahPasien');
             }
         }
     }
     
     public function editPasien($id) {
-        $data['pasien'] = $this->pasienModel->getPasien($id);
-        $this->load->view('pasien/editPasien',$data);
+        if ($this->session->has_userdata('username')){
+            $data['pasien'] = $this->pasienModel->getPasien($id);
+            $this->load->view('pasien/editPasien',$data);
+        } else {
+            redirect('login');
+        }
+            
         if (isset($_POST['btnEditPasien'])){
             $data1 = array(
                 'id' => $this->input->post('nik'),
