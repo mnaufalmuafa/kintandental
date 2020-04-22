@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            id="inputNIK" 
                            placeholder="NIK" 
                            max="9999999999999999"
-                           value="332956296500007"
+                           value="<?= $pasien['id'] ?>"
                            required readonly>
                 </div>
             </div>
@@ -80,14 +80,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            type="text" name="nama" 
                            class="form-control disabled" id="inputNama" 
                            placeholder="Nama"
-                           value="Duta Dutaa"
+                           value="<?= $pasien['nama'] ?>"
                            required readonly>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
                 <div class="col-sm-10">
-                    <input type="text" name="alamat" class="form-control" id="inputAlamat" placeholder="Alamat" required>
+                    <input 
+                           type="text" 
+                           name="alamat" 
+                           class="form-control" 
+                           id="inputAlamat" 
+                           placeholder="Alamat" 
+                           value = "<?= $pasien['alamat'] ?>"
+                           required>
                 </div>
             </div>
             <div class="form-group row">
@@ -100,7 +107,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            minlength="10"
                            pattern="[0]{1}[8]{1}[0-9]{8,10}"
                            class="form-control" 
-                           id="inputNoTelp" 
+                           id="inputNoTelp"
+                           value = "<?= $pasien['noTelp'] ?>"
                            placeholder="08xxxxxxxxxx" 
                            required>
                 </div>
@@ -108,7 +116,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group row">
                 <label for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</label>
                 <div class="col-sm-10">
-                    <input type="text" name="pekerjaan" class="form-control" id="inputPekerjaan" placeholder="Pekerjaan" required>
+                    <input 
+                           type="text" 
+                           name="pekerjaan" 
+                           class="form-control" 
+                           id="inputPekerjaan" 
+                           placeholder="Pekerjaan" 
+                           value = "<?= $pasien['pekerjaan'] ?>"
+                           required>
                 </div>
             </div>
             <button 

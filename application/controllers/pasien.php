@@ -27,7 +27,7 @@ class pasien extends CI_Controller {
                     'alamat' => $this->input->post('alamat'),
                     'pekerjaan' => $this->input->post('pekerjaan'),
                     'noTelp' => $this->input->post('noTelp'),
-                    );
+                );
                 $data2 = array(
                     'nik' => $this->input->post('nik'),
                     'nama' => $this->input->post('nama'),
@@ -63,17 +63,16 @@ class pasien extends CI_Controller {
                 'alamat' => $this->input->post('alamat'),
                 'pekerjaan' => $this->input->post('pekerjaan'),
                 'noTelp' => $this->input->post('noTelp'),
-                );
-
+            );
             $data2 = $this->pasienModel->editPasien($this->input->post('nik'),$data1);
-              redirect('pasien');
+            redirect('pasien');
         }
     }
 
     public function hapusPasien($id){
         $this->pasienModel->hapusPemeriksaan($id);
         $this->pasienModel->hapusPasien($id);
-            redirect('pasien');
+        redirect('pasien');
     }
 }
 

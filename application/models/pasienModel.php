@@ -72,7 +72,7 @@ class pasienModel extends CI_Model {
     }
 
     public function getPasien($id){
-        return $this->db->query("SELECT `id`,`alamat`,`noTelp`,`pekerjaan`,`nama` FROM `pasien` JOIN `orang` ON (`pasien`.`id`=`orang`.`nik`)")->row_array();
+        return $this->db->query("SELECT `id`,`alamat`,`noTelp`,`pekerjaan`,`nama` FROM `pasien` JOIN `orang` ON (`pasien`.`id`=`orang`.`nik`) WHERE `nik` = '".$id."'")->row_array();
     }
 }
 ?>
