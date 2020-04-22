@@ -87,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                  data-tippy-content="Edit Dokter"
                                  data-id="'.$dokter[1].'">
                             <img 
-                                 class="ic-aksi" 
+                                 class="ic-aksi ic-aksi-hapus" 
                                  src="'.$ic_delete_account_loc.'"
                                  data-tippy-content="Hapus Dokter"
                                  data-id="'.$dokter[1].'">
