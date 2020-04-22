@@ -19,12 +19,16 @@ class dokter extends CI_Controller {
     }
     
     public function tambahDokter() {
-        $error = $this->session->flashdata('error');
-        if(isset($error)) {
-            $data3['error_msg'] = 'NIK sudah terdaftar'; 
-             $this->load->view('dokter/tambahDokter', $data3);
+        if ($this->session->has_userdata('username')){
+            $error = $this->session->flashdata('error');
+            if(isset($error)) {
+                $data3['error_msg'] = 'NIK sudah terdaftar'; 
+                 $this->load->view('dokter/tambahDokter', $data3);
+            } else {
+                $this->load->view('dokter/tambahDokter');
+            }
         } else {
-            $this->load->view('dokter/tambahDokter');
+            redirect('login');
         }
 
         if (isset($_POST['btnTambahDokter'])) {
@@ -54,8 +58,13 @@ class dokter extends CI_Controller {
     }
     
     public function editDokter($id) {
-        $data['dokter'] = $this->dokterModel->getDokter($id);
-        $this->load->view('dokter/editDokter', $data);
+        if ($this->session->has_userdata('username')){
+            $data['dokter'] = $this->dokterModel->getDokter($id);
+            $this->load->view('dokter/editDokter', $data);
+        } else {
+            redirect('login');
+        }
+        
         if (isset($_POST['btnEditDokter'])){
             $data1 = array(
                 'str' => $this->input->post('str'),
