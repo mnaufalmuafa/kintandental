@@ -134,5 +134,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
         <script src="<?= base_url('assets/js/viewController/beranda.js') ?>"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                <?php
+                    if (isset($error_msg)) {
+                        echo "alert(\"".$error_msg."\")";
+                    }
+                ?>
+            });
+        </script>
     </body>
 </html>
