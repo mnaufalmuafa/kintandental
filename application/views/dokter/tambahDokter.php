@@ -63,12 +63,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <label for="nik" class="col-sm-2 col-form-label">NIK</label>
                 <div class="col-sm-10">
                     <input 
-                           type="number" 
+                           type="tel" 
                            name="nik" 
                            class="form-control" 
                            id="inputNIK" 
                            placeholder="NIK" 
-                           max="9999999999999999"
+                           pattern="[0-9]{16}"
                            required>
                 </div>
             </div>
