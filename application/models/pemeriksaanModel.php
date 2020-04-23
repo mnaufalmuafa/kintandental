@@ -13,6 +13,25 @@ class pemeriksaanModel extends CI_Model {
     private function getWaktu($jam,$menit) {
         return $jam." : ".$menit;
     }
+
+
+    function isExist(){
+        $nDokter = $this->db->get('dokter')->num_rows();
+        $nPasien = $this->db->get('pasien')->num_rows();
+        $nLayanan = $this->db->get('layanan')->num_rows();
+
+        if($nDokter>0 && $nPasien>0 && $nLayanan>0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function tambahPemeriksaan($data){
+        //INSERT INTO `pemeriksaan` ( `idDokter`, `idPasien`, `idLayanan`, `tanggal`, `jam`, `menit`) VALUES ( '123123', '1234567890123456', '5', '2020-04-23', '12', '07') 
+        $this->db->query("INSERT INTO `pemeriksaan` ( `idDokter`, `idPasien`, `idLayanan`, `tanggal`, `jam`, `menit`) VALUES ( '".$data['idDokter']."', '".$data['idPasien']."', '".$data['idLayanan']."', '".$data['tanggal']."', '".$data['jam']."', '".$data['menit']."')");  
+    }
     
     function getPemeriksaan() {
         $n = $this->getBanyakPemeriksaan();
