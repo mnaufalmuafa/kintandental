@@ -3,7 +3,7 @@ $(document).ready(function(){
     var tanggal = d.getDate();
     var bulan = d.getMonth()+1;
     var tahun = d.getFullYear();
-    $('#inputTanggal').val(tanggal.toString()+' - '+bulan.toString()+' - '+tahun);
+    $('#inputTanggal').val(tahun+'-'+bulan.toString()+'-'+tanggal.toString());
     $(document).on('click', '#dokter', function (e){
         document.getElementById("inputDokter").value = $(this).attr('data-id')+ ' - '+$(this).attr('data-nama');
         $('#modalDokter').modal('hide');

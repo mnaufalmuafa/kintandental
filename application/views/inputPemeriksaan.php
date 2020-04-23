@@ -64,7 +64,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-10">
                     <div class="input-group">
                         <input 
-                               type="text" name="dokter" 
+                               type="text"
+                               value="<?= $dataDokter[0][1] ?> - <?= $dataDokter[0][2] ?>" 
+                               name="dokter" 
                                class="form-control" id="inputDokter" placeholder="Dokter"readonly required>
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-primer" data-toggle="modal" data-target="#modalDokter">Pilih</button>
@@ -77,7 +79,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-10">
                     <div class="input-group">
                         <input 
-                               type="text" name="pasien" 
+                               type="text" 
+                               value="<?= $dataPasien[0][1] ?> - <?= $dataPasien[0][2] ?>"
+                               name="pasien" 
                                class="form-control" id="inputPasien" placeholder="Pasien" readonly required>
                          <span class="input-group-btn">
                             <button type="button" class="btn btn-primer" data-toggle="modal" data-target="#modalPasien">Pilih</button>
@@ -88,13 +92,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group row">
                 <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputTanggal" placeholder="Tanggal" required readonly>
+                    <input type="text" name="tanggal" class="form-control" id="inputTanggal" placeholder="Tanggal" required readonly>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Jam</label>
                 <div class="col-sm-10">
-                    <input type="time" class="form-control inputJam" id="inputJam" placeholder="Waktu pemeriksaan" required>
+                    <input type="time" name="jam" class="form-control inputJam" id="inputJam" placeholder="Waktu pemeriksaan" required>
                 </div>
             </div>
             <div class="form-group row">
@@ -102,7 +106,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-10">
                     <div class="input-group">
                         <input 
-                               type="text" name="layanan" 
+                               type="text"
+                                value="<?= $dataLayanan[0][1] ?> - <?= $dataLayanan[0][2] ?>" 
+                               name="layanan" 
                                class="form-control" id="inputLayanan" placeholder="Layanan" readonly required>
                          <span class="input-group-btn">
                             <button type="button" class="btn btn-primer" data-toggle="modal" data-target="#modalLayanan">Pilih</button>
@@ -138,14 +144,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr id="dokter" data-id="1" data-nama="Drg. Kikim" >
-                                        <td>1</td>
-                                        <td>Drg. Kikim</td>
-                                    </tr>
-                                    <tr id="dokter" data-id="2" data-nama="Drg. Kakam" >
-                                        <td>2</td>
-                                        <td>Drg. Kakam</td>
-                                    </tr>
+                                    <?php
+                                     foreach($dataDokter as $dokter) {
+                                        echo '<tr id="dokter" data-id="'.$dokter[1].'" data-nama="'.$dokter[2].'" >';
+                                        echo '<td>'.$dokter[1].'</td>';
+                                        echo '<td>'.$dokter[2].'</td>';
+                                        echo '</tr>';
+                                        
+                                    }
+                                    ?>
+
+
                                 </tbody>
                             </table>
                         </div>
@@ -175,14 +184,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr id="pasien" data-id="1" data-nama="Duta" >
-                                        <td>1</td>
-                                        <td>Duta</td>
-                                    </tr>
-                                    <tr id="pasien" data-id="2" data-nama="Dutaa" >
-                                        <td>2</td>
-                                        <td>Dutaa</td>
-                                    </tr>
+                                    <?php
+                                     foreach($dataPasien as $pasien) {
+                                        echo '<tr id="pasien" data-id="'.$pasien[1].'" data-nama="'.$pasien[2].'" >';
+                                        echo '<td>'.$pasien[1].'</td>';
+                                        echo '<td>'.$pasien[2].'</td>';
+                                        echo '</tr>';
+                                        
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -212,14 +222,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr id="layanan" data-id="1" data-nama="Cabut Gigi" >
-                                        <td>1</td>
-                                        <td>Cabut Gigi</td>
-                                    </tr>
-                                    <tr id="layanan" data-id="2" data-nama="Tambal Gigi" >
-                                        <td>2</td>
-                                        <td>Tambal Gigi</td>
-                                    </tr>
+                                     <?php
+                                     foreach($dataLayanan as $layanan) {
+                                        echo '<tr id="layanan" data-id="'.$layanan[1].'" data-nama="'.$layanan[2].'" >';
+                                        echo '<td>'.$layanan[1].'</td>';
+                                        echo '<td>'.$layanan[2].'</td>';
+                                        echo '</tr>';
+                                        
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -238,5 +249,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?= base_url('assets/js/controller/btnCollapsed.js') ?>"></script>
         <script src="<?= base_url('assets/js/controller/logout.js') ?>"></script>
         <script src="<?= base_url('assets/js/viewController/inputPemeriksaan.js') ?>"></script>
+        
     </body>
 </html>
