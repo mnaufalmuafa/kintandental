@@ -264,7 +264,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     },
                     success : function(data) {
                         getData();
-                        alert('sukses');
                         $('#addLayanan').trigger("reset");
                     } 
                 });
